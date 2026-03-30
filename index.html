@@ -3,118 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amadeus IT - The Complete Case</title>
+<title>Amadeus IT - GDS Sector Analysis</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@300;400;500;600&family=Fredoka+One&family=Oswald:wght@400;500;600;700&display=swap');
 
-/* ═══════════════════════════════════════════════
- MONOPOLY PASSWORD GATE - FULL BOARD EDITION
- ═══════════════════════════════════════════════ */
-#pw-gate{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;overflow:hidden;background:#c6dfc0}
-#pw-gate *{box-sizing:border-box}
-
-/* Animated green linen texture */
+/* GATE */
+#pw-gate{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#c6dfc0;font-family:Oswald,sans-serif;overflow:hidden}
 #pw-gate::before{content:'';position:absolute;inset:-80%;z-index:0;
  background:
  repeating-linear-gradient(0deg,transparent,transparent 76px,rgba(0,80,0,.06) 76px,rgba(0,80,0,.06) 78px),
  repeating-linear-gradient(90deg,transparent,transparent 76px,rgba(0,80,0,.06) 76px,rgba(0,80,0,.06) 78px);
  animation:bDrift 30s linear infinite}
 @keyframes bDrift{to{transform:translate(-78px,-78px) rotate(.5deg)}}
-
-/* ── Floating property deed cards ── */
-.deed{position:absolute;z-index:0;width:100px;border-radius:6px;border:2.5px solid rgba(0,0,0,.12);
- background:#fff;padding:0;overflow:hidden;pointer-events:none;
- box-shadow:0 3px 12px rgba(0,0,0,.12);opacity:.7;transition:opacity .3s}
-.deed .d-top{padding:3px 8px 2px;text-align:center;color:#fff;font-size:6.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
-.deed .d-name{text-align:center;padding:6px 6px 4px;font-family:'Fredoka One',cursive;font-size:9px;color:#1a472a;line-height:1.2}
-.deed .d-price{text-align:center;font-size:7px;color:#888;padding-bottom:5px;font-weight:400}
-/* Colour groups */
-.dg-brown .d-top{background:#8B4513}.dg-lblue .d-top{background:#87CEEB}
-.dg-pink .d-top{background:#D81B60}.dg-orange .d-top{background:#E65100}
-.dg-red .d-top{background:#C62828}.dg-yellow .d-top{background:#F9A825}
-.dg-green .d-top{background:#2E7D32}.dg-dblue .d-top{background:#0D47A1}
-.dg-station .d-top{background:#333}.dg-util .d-top{background:#666}
-/* Positions & floats */
-.deed.p1{top:4%;left:3%;animation:deedF1 19s ease-in-out infinite;transform:rotate(-6deg)}
-.deed.p2{top:8%;right:4%;animation:deedF2 23s ease-in-out infinite;transform:rotate(4deg)}
-.deed.p3{top:30%;left:2%;animation:deedF1 17s ease-in-out infinite reverse;transform:rotate(8deg)}
-.deed.p4{top:55%;right:2%;animation:deedF2 21s ease-in-out infinite reverse;transform:rotate(-5deg)}
-.deed.p5{bottom:15%;left:5%;animation:deedF2 25s ease-in-out infinite;transform:rotate(3deg)}
-.deed.p6{bottom:8%;right:6%;animation:deedF1 20s ease-in-out infinite;transform:rotate(-7deg)}
-.deed.p7{top:18%;left:15%;animation:deedF2 22s ease-in-out infinite reverse;transform:rotate(10deg)}
-.deed.p8{bottom:30%;right:14%;animation:deedF1 18s ease-in-out infinite;transform:rotate(-3deg)}
-.deed.p9{top:42%;right:12%;animation:deedF2 26s ease-in-out infinite;transform:rotate(6deg)}
-.deed.p10{bottom:45%;left:8%;animation:deedF1 24s ease-in-out infinite reverse;transform:rotate(-9deg)}
-@keyframes deedF1{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-18px) rotate(-3deg)}}
-@keyframes deedF2{0%,100%{transform:translateY(0) rotate(4deg)}50%{transform:translateY(14px) rotate(7deg)}}
-
-/* ── Floating tokens ── */
-.token{position:absolute;z-index:0;font-size:28px;opacity:.5;pointer-events:none;filter:grayscale(30%)}
-.token.t1{top:12%;left:40%;animation:tokBob 4s ease-in-out infinite}
-.token.t2{bottom:20%;right:30%;animation:tokBob 5s ease-in-out 1s infinite}
-.token.t3{top:60%;left:25%;animation:tokBob 3.5s ease-in-out .5s infinite}
-.token.t4{bottom:35%;left:45%;animation:tokBob 4.5s ease-in-out 2s infinite}
-.token.t5{top:25%;right:25%;animation:tokBob 3.8s ease-in-out 1.5s infinite}
-@keyframes tokBob{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-10px) rotate(5deg)}}
-
-/* ── Central card ── */
-.pw-card{position:relative;z-index:2;background:#fff;border:3.5px solid #1a472a;border-radius:16px;
- padding:0 44px 36px;max-width:460px;width:92%;
- box-shadow:0 30px 100px rgba(0,0,0,.25),0 0 0 10px rgba(26,71,42,.06),inset 0 0 60px rgba(26,71,42,.02);
- text-align:center;animation:cardIn .8s cubic-bezier(.34,1.56,.64,1) both}
-@keyframes cardIn{0%{opacity:0;transform:translateY(-40px) rotate(-1.5deg) scale(.9)}100%{opacity:1;transform:none}}
-
-/* Top banner */
-.pw-banner{background:linear-gradient(135deg,#c41e00,#e8501a);color:#fff;padding:14px 24px 12px;
- border-radius:12px 12px 0 0;margin:0 -44px 22px;font-size:9.5px;letter-spacing:.4em;text-transform:uppercase;font-weight:700}
-
-.pw-title{font-family:'Fredoka One',cursive;font-size:28px;color:#1a472a;margin-bottom:2px;letter-spacing:-.5px}
-.pw-sub{font-size:12px;color:#777;margin-bottom:22px;font-weight:400;line-height:1.5}
-.pw-input-wrap{position:relative;margin-bottom:12px}
-.pw-input-wrap input{width:100%;padding:14px 16px;border:2.5px solid #d0d0d0;border-radius:10px;
- font-family:'Oswald',sans-serif;font-size:18px;text-align:center;letter-spacing:.12em;
- color:#1a472a;background:#f8fff5;outline:none;transition:all .3s}
-.pw-input-wrap input:focus{border-color:#1a472a;box-shadow:0 0 0 4px rgba(26,71,42,.1)}
-.pw-input-wrap input.wrong{border-color:#c41e00;background:#fff5f5;animation:shake .5s ease-in-out}
-@keyframes shake{0%,100%{transform:translateX(0)}15%{transform:translateX(-12px)}30%{transform:translateX(10px)}45%{transform:translateX(-8px)}60%{transform:translateX(6px)}75%{transform:translateX(-3px)}}
-.pw-btn{width:100%;padding:14px;background:linear-gradient(135deg,#1a472a,#2d7040);color:#fff;border:none;
- border-radius:10px;font-family:'Oswald',sans-serif;font-size:15px;font-weight:600;letter-spacing:.15em;
- text-transform:uppercase;cursor:pointer;transition:all .25s;box-shadow:0 5px 18px rgba(26,71,42,.3)}
-.pw-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(26,71,42,.4);background:linear-gradient(135deg,#24613a,#3a9055)}
-.pw-btn:active{transform:translateY(0)}
-.pw-error{color:#c41e00;font-size:13px;font-weight:600;margin-top:10px;min-height:20px}
-.pw-hint{font-size:10.5px;color:#aaa;margin-top:14px;font-weight:400;line-height:1.6}
-.pw-hint em{color:#c41e00;font-style:normal;font-weight:600}
-
-/* Corner decorative houses & hotels */
-.pw-h{position:absolute;width:14px;height:14px;background:#c41e00;clip-path:polygon(50% 0%,100% 40%,100% 100%,0% 100%,0% 40%)}
-.pw-h.a{top:12px;left:12px;transform:rotate(-10deg)}.pw-h.b{top:12px;right:12px;transform:rotate(10deg)}
-.pw-h.c{bottom:12px;left:12px;transform:rotate(-6deg)}.pw-h.d{bottom:12px;right:12px;transform:rotate(6deg)}
-.pw-ht{position:absolute;width:18px;height:18px;background:#1a472a;clip-path:polygon(50% 0%,100% 35%,100% 100%,0% 100%,0% 35%);opacity:.4}
-.pw-ht.x{top:30px;left:16px;transform:rotate(-3deg)}.pw-ht.y{bottom:30px;right:16px;transform:rotate(3deg)}
-
-/* ── Dice rolling in corner ── */
-.dice-pair{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:6px;opacity:.25}
-.die{width:22px;height:22px;background:#fff;border:1.5px solid #bbb;border-radius:4px;display:grid;padding:3px}
-.die.d1{grid-template:1fr 1fr/1fr 1fr;animation:dieR1 3s ease-in-out infinite}
-.die.d2{animation:dieR2 3s ease-in-out 1.5s infinite}
-.dot{width:4px;height:4px;background:#333;border-radius:50%;align-self:center;justify-self:center}
-@keyframes dieR1{0%,100%{transform:rotate(0)}50%{transform:rotate(8deg)}}
-@keyframes dieR2{0%,100%{transform:rotate(0)}50%{transform:rotate(-8deg)}}
-
-/* ── Unlock ── */
-#pw-gate.unlocked .pw-card{animation:cardWin .6s ease-in-out forwards}
-@keyframes cardWin{0%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:1}100%{transform:scale(.9) translateY(-30px);opacity:0}}
-#pw-gate.unlocked .deed,#pw-gate.unlocked .token{transition:all .5s;opacity:0;transform:scale(.8)}
-#pw-gate.unlocked{animation:gateGo 1s ease-in-out .4s forwards}
-@keyframes gateGo{to{opacity:0;pointer-events:none}}
-.pw-success{display:none;margin-top:12px;padding:10px 16px;background:#e8f5e9;border:2px solid #2E7D32;border-radius:8px;
- font-family:'Fredoka One',cursive;font-size:14px;color:#1a472a}
-.pw-success.show{display:block;animation:successPop .4s cubic-bezier(.34,1.56,.64,1) both}
-@keyframes successPop{0%{transform:scale(.8);opacity:0}100%{transform:scale(1);opacity:1}}
+@keyframes cardIn{0%{opacity:0;transform:translateY(-20px) scale(.95)}100%{opacity:1;transform:none}}
 #main-content{display:none}
-#main-content.show{display:block;animation:reveal .7s ease-out .9s both}
+#main-content.show{display:block;animation:reveal .5s ease-out both}
 @keyframes reveal{from{opacity:0}to{opacity:1}}
 
 :root {
@@ -205,7 +109,10 @@ body::before {
 .tab-nav-inner {
  max-width: 1520px; margin: 0 auto; padding: 0 32px;
  display: flex; gap: 0; overflow-x: auto;
+ -webkit-overflow-scrolling: touch;
+ scrollbar-width: none;
 }
+.tab-nav-inner::-webkit-scrollbar { display: none; }
 .tab-btn {
  font-family: 'IBM Plex Mono', monospace; font-size: 10px;
  letter-spacing: 0.08em; text-transform: uppercase;
@@ -365,16 +272,70 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 .tier-exposed { border-left: 3px solid var(--exposed); }
 
 /* RESPONSIVE */
+/* MOBILE & TABLET */
 @media (max-width: 1100px) {
  .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
  .tab-btn { padding: 10px 12px; font-size: 9px; }
+}
+@media (max-width: 768px) {
+ .container { padding: 0 16px; }
+ .section { padding: 20px 0; }
+ .section h2 { font-size: 17px; }
+ .section .sub { font-size: 11px; }
+ .masthead-inner { padding: 24px 16px 18px; }
+ .masthead h1 { font-size: 18px; }
+ .masthead .subtitle { font-size: 11px; }
+ .masthead .meta-row { flex-wrap: wrap; gap: 10px; font-size: 9px; }
+ .tab-nav-inner { padding: 0 8px; }
+ .tab-btn { padding: 8px 8px; font-size: 7.5px; letter-spacing: 0.04em; }
+ .card { padding: 12px; }
+ .card-val { font-size: 18px; }
+ .card-body { font-size: 10px; }
+ .card-label { font-size: 8px; }
+ table.ct { font-size: 11px; }
+ table.ct thead th { font-size: 8px; padding: 8px 8px; }
+ table.ct tbody td { padding: 8px 8px; font-size: 11px; }
+ .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+ table.ct { min-width: 500px; }
+ .metric-cell { padding: 10px; }
+ .mc-val { font-size: 18px; }
+ .synth { padding: 14px 16px; }
+ .synth h3 { font-size: 14px; }
+ .grid-2, .grid-3, .grid-4, .grid-5 { gap: 10px; }
+ .cell-val { font-size: 11px; }
+ .section-label { font-size: 8px; letter-spacing: 0.2em; }
+ .bar-label { font-size: 7px; }
+ .lineage-node { padding: 10px 14px; }
+ .src .tip { width: 220px; font-size: 9px; }
+}
+@media (max-width: 480px) {
+ .tab-btn { padding: 7px 6px; font-size: 7px; letter-spacing: 0.02em; }
+ .masthead h1 { font-size: 15px; }
+ .section h2 { font-size: 15px; }
+ .card-val { font-size: 16px; }
+ table.ct { min-width: 420px; }
+ table.ct tbody td { font-size: 10px; padding: 6px 6px; }
+ table.ct thead th { font-size: 7px; padding: 6px 6px; }
+ .container { padding: 0 10px; }
+ .metric-strip.grid-3 { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
 <body>
 
 <!-- ═══════ MONOPOLY PASSWORD GATE - FULL BOARD EDITION ═══════ -->
-<div id="pw-gate"><div style="max-width:380px;width:88%;background:#fff;border:1.5px solid #e0e0e0;border-radius:12px;padding:36px 32px;text-align:center;box-shadow:0 16px 48px rgba(0,0,0,0.06);z-index:1;animation:cardIn .5s cubic-bezier(.34,1.56,.64,1) both"><div style="font-size:36px;margin-bottom:10px">&#128274;</div><div style="font-family:Oswald,sans-serif;font-size:20px;color:#222;font-weight:600;margin-bottom:4px">Private page</div><div style="font-size:12px;color:#999;margin-bottom:22px">If you are here, you probably know the password.</div><input type="text" id="pw-field" placeholder="Password" autocomplete="off" spellcheck="false" style="width:100%;padding:11px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;text-align:center;color:#333;outline:none"><button onclick="checkPw()" style="width:100%;padding:11px;margin-top:8px;background:#333;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">Enter</button><div id="pw-error" style="color:#c41e00;font-size:11px;font-weight:600;margin-top:8px;min-height:16px"></div></div></div>
+<div id="pw-gate">
+<div style="max-width:420px;width:90%;background:#fff;border-radius:14px;padding:40px 36px;text-align:center;box-shadow:0 20px 60px rgba(0,40,0,0.15);position:relative;z-index:1;animation:cardIn .6s cubic-bezier(.34,1.56,.64,1) both">
+ <div style="font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#2E7D32;font-weight:700;margin-bottom:6px">GDS Sector Analysis</div>
+ <div style="font-family:'Playfair Display',serif;font-size:26px;color:#1a472a;font-weight:700;margin-bottom:4px">Amadeus IT Group</div>
+ <div style="font-size:11px;color:#888;margin-bottom:24px">Prepared by Joe Barry - March 2026</div>
+ <div style="width:60px;height:2px;background:#2E7D32;margin:0 auto 24px;border-radius:1px"></div>
+ <input type="text" id="pw-field" placeholder="Password" autocomplete="off" spellcheck="false" style="width:100%;padding:12px 16px;border:2px solid #c8e6c9;border-radius:8px;font-family:Oswald,sans-serif;font-size:16px;text-align:center;color:#333;outline:none;background:#f9fdf9;transition:all .3s">
+ <button onclick="checkPw()" style="width:100%;padding:12px;margin-top:10px;background:#2E7D32;color:#fff;border:none;border-radius:8px;font-family:Oswald,sans-serif;font-size:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .2s">Enter</button>
+ <div id="pw-error" style="color:#c41e00;font-size:11px;font-weight:600;margin-top:10px;min-height:16px"></div>
+ <div style="font-size:9px;color:#aaa;margin-top:16px">Private document</div>
+</div>
+</div>
 <script>!function(){var f=document.getElementById("pw-field");f.addEventListener("keydown",function(e){"Enter"===e.key&&checkPw()}),setTimeout(function(){f.focus()},400)}();function checkPw(){var f=document.getElementById("pw-field"),e=document.getElementById("pw-error"),v=f.value.toLowerCase().trim();if("mozart"===v){f.style.borderColor="#4CAF50";e.style.color="#333";e.textContent="Welcome.";setTimeout(function(){document.getElementById("pw-gate").style.transition="opacity 0.4s";document.getElementById("pw-gate").style.opacity="0";document.getElementById("main-content").classList.add("show")},300);setTimeout(function(){document.getElementById("pw-gate").style.display="none"},800)}else if(""===v)e.textContent="";else{f.style.borderColor="#c41e00";f.style.background="#fff5f5";e.textContent=["Nope.","Not quite.","Try again.","Wrong."][Math.floor(4*Math.random())];setTimeout(function(){f.style.borderColor="#ddd";f.style.background="#fff"},400)}}</script>
 
 <!-- ═══════ MAIN CONTENT (hidden until unlocked) ═══════ -->
@@ -383,8 +344,8 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <!-- ═══════════════ MASTHEAD ═══════════════ -->
 <div class="masthead">
 <div class="masthead-inner">
- <div class="classification">Amadeus IT Group - Investment Analysis - March 2026</div>
- <h1>Amadeus IT Group - <span class="gr">The Complete Case</span></h1>
+ <div class="classification">Amadeus IT Group - GDS Sector Analysis - March 2026</div>
+ <h1>Amadeus IT Group - <span class="gr">GDS Sector Analysis</span></h1>
  <div class="subtitle"></div>
  <div class="meta-row">
  <span>Joe Barry - March 2026</span>
@@ -417,7 +378,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <div class="section">
 <div class="section-label"></div>
 <h2 style="font-size:20px; line-height:1.5; max-width:1100px;">
- Amadeus IT's Passenger Service System is a <span style="color:var(--ams-green)">zero-churn mission-critical platform</span> processing airline operations for 150+ carriers, buried inside a conglomerate structure that causes the market to apply a <span style="color:var(--gold)">blended travel-sector multiple</span> instead of the <span style="color:var(--fortress)">35–40× enterprise software multiple</span> the franchise deserves - creating a quantifiable SOTP gap that can be closed by catalyst.
+ Amadeus IT's Passenger Service System is a <span style="color:var(--ams-green)">zero-churn mission-critical platform</span> processing airline operations for 150+ carriers, buried inside a conglomerate structure that causes the market to apply a <span style="color:var(--gold)">blended travel-sector multiple</span> instead of the <span style="color:var(--fortress)">26-41x enterprise software multiple</span> the franchise deserves - creating a quantifiable SOTP gap that can be closed by catalyst.
 </h2>
 </div>
 
@@ -467,7 +428,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 
 <div class="synth">
  <h3>The Gap</h3>
- <p><strong>Sum-of-parts: €36–52bn.</strong> Current EV: €23.2bn. The gap is €12–29bn, or <strong>53–126% upside</strong> to a reasonable SOTP. If enterprise software analysts covered PSS as a standalone, the multiple would reprice to 35–40×. This is a structural classification error.</p>
+ <p><strong>Sum-of-parts: €36–52bn.</strong> Current EV: €23.2bn. The gap is €12–29bn, or <strong>53–126% upside</strong> to a reasonable SOTP. If enterprise software analysts covered PSS as a standalone, the multiple would reprice to 26-41x. This is a structural classification error.</p>
 </div>
 </div>
 
@@ -704,7 +665,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <td style="text-align:right" class="cell-val">€2.2bn</td>
  <td style="text-align:right" class="cell-val">€1,563m</td>
  <td style="text-align:right" class="cell-val">70.9%</td>
- <td>Dominant position. No documented PSS departure on public record. 150+ airlines. 70.9% contribution margin. Revenue per PB growing +4.4%. Comparable infra software at 35-40x. Discounted for cyclicality and inclusion of Airport IT/Expert Services sub-segments.</td>
+ <td>Dominant position. No documented PSS departure on public record. 150+ airlines. 70.9% contribution margin. Revenue per PB growing +4.4%. Comparable infra software at 26-41x. Discounted for cyclicality and inclusion of Airport IT/Expert Services sub-segments.</td>
  <td style="text-align:right" class="cell-val" style="color:var(--fortress)">18–25×</td>
  <td style="text-align:right; color:var(--fortress); font-weight:700; font-size:14px">€28.1–39.1bn</td>
 </tr>
@@ -751,7 +712,70 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 </div>
 
 <div class="section">
-<div class="section-label">§ 3.2 - Contribution to EBITDA Bridge</div>
+<div class="section-label">§ 3.2 - Comparable Multiples</div>
+<h2>Where the 18-25x Multiple Comes From</h2>
+<div class="sub">Mission-critical enterprise software with high switching costs and retention above 95%. All data from StockAnalysis.com (sourced from SEC filings).</div>
+
+<div class="table-wrap">
+<table class="ct">
+<thead><tr>
+ <th style="width:160px">Company</th>
+ <th style="text-align:right;width:90px">EV</th>
+ <th style="text-align:right;width:90px">EV/EBITDA</th>
+ <th style="width:200px">Lock-in Mechanism</th>
+ <th style="width:80px">Retention</th>
+ <th style="width:110px">Source Date</th>
+</tr></thead>
+<tbody>
+<tr>
+ <td><strong>ServiceNow</strong><br><span style="font-size:9px;color:var(--text-dim)">NYSE: NOW</span></td>
+ <td style="text-align:right" class="cell-val">$111.5bn</td>
+ <td style="text-align:right" class="cell-val">40.7x</td>
+ <td>IT workflow system of record. Incident management, HR, security ops.</td>
+ <td class="cell-val">97%+</td>
+ <td style="font-size:9px;color:var(--text-dim)">StockAnalysis.com<br>4 Mar 2026</td>
+</tr>
+<tr>
+ <td><strong>Tyler Technologies</strong><br><span style="font-size:9px;color:var(--text-dim)">NYSE: TYL</span></td>
+ <td style="text-align:right" class="cell-val">$14.6bn</td>
+ <td style="text-align:right" class="cell-val">32.0x</td>
+ <td>Government software. Sole provider to municipalities. Procurement lock-in.</td>
+ <td class="cell-val">98%+</td>
+ <td style="font-size:9px;color:var(--text-dim)">StockAnalysis.com<br>10 Mar 2026</td>
+</tr>
+<tr>
+ <td><strong>Veeva Systems</strong><br><span style="font-size:9px;color:var(--text-dim)">NYSE: VEEV</span></td>
+ <td style="text-align:right" class="cell-val">$25.7bn</td>
+ <td style="text-align:right" class="cell-val">26.1x</td>
+ <td>Life sciences CRM and regulatory. Switching requires FDA revalidation.</td>
+ <td class="cell-val">~95%</td>
+ <td style="font-size:9px;color:var(--text-dim)">StockAnalysis.com<br>6 Mar 2026</td>
+</tr>
+<tr style="border-top:2px solid var(--border-bright)">
+ <td colspan="2" style="text-align:right;color:var(--text-dim)"><strong>Comp range</strong></td>
+ <td style="text-align:right;color:var(--gold)" class="cell-val"><strong>26-41x</strong></td>
+ <td colspan="3"></td>
+</tr>
+<tr style="background:var(--surface2)">
+ <td><strong>Amadeus Air IT</strong><br><span style="font-size:9px;color:var(--ams-green)">Not separately traded</span></td>
+ <td style="text-align:right" class="cell-val">€23.2bn<br><span style="font-size:9px;color:var(--text-dim)">(whole group)</span></td>
+ <td style="text-align:right;color:var(--red)" class="cell-val"><strong>9.5x</strong><br><span style="font-size:9px;color:var(--text-dim)">(blended group)</span></td>
+ <td>Airline PSS. 18-36 month migration. <2% of airline revenue.</td>
+ <td class="cell-val">No documented departure</td>
+ <td style="font-size:9px;color:var(--text-dim)">Amadeus FY2024<br>CNMV filing</td>
+</tr>
+<tr style="background:var(--surface2)">
+ <td colspan="2" style="text-align:right;color:var(--text-dim)"><strong>Multiple applied in SOTP</strong></td>
+ <td style="text-align:right;color:var(--ams-green)" class="cell-val"><strong>18-25x</strong></td>
+ <td colspan="3" style="font-size:10px;color:var(--text-dim)">30-55% discount to comp range. For: (a) cyclical revenue (COVID: -61%), (b) includes non-PSS sub-segments (Airport IT, Expert Services), (c) contribution basis not EBITDA.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">§ 3.3 - Contribution to EBITDA Bridge</div>
 <h2>Why the SOTP Uses Contribution, Not EBITDA</h2>
 <div class="sub">Amadeus does not report EBITDA by segment. It reports segment contribution (revenue minus direct costs). The bridge to group EBITDA runs through net indirect costs.</div>
 
@@ -779,7 +803,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 </div>
 
 <div class="section">
-<div class="section-label">§ 3.3 - Implied Valuation</div>
+<div class="section-label">§ 3.4 - Implied Valuation</div>
 <h2>Implied Valuation at Current Price</h2>
 
 <div class="grid-2">
@@ -804,7 +828,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 </div>
 
 <div class="section">
-<div class="section-label">§ 3.3 - Analyst Coverage</div>
+<div class="section-label">§ 3.5 - Analyst Coverage</div>
 <h2>Analyst Coverage</h2>
 
 <div class="grid-3">
@@ -814,7 +838,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  </div>
  <div class="card">
  <div class="card-label" style="color:var(--ams-green)">Who SHOULD Cover PSS</div>
- <div class="card-body"><strong>Enterprise software analysts</strong> covering SAP, Oracle, ServiceNow, Verint. They understand mission-critical infrastructure with zero churn. They apply 35–40× to mission-critical software platforms with contractual revenue. If a single Tier 1 software analyst published a SOTP note on Amadeus, the re-rating conversation would begin.</div>
+ <div class="card-body"><strong>Enterprise software analysts</strong> covering SAP, Oracle, ServiceNow, Verint. They understand mission-critical infrastructure with zero churn. They apply 26-41x to mission-critical software platforms with contractual revenue. If a single Tier 1 software analyst published a SOTP note on Amadeus, the re-rating conversation would begin.</div>
  </div>
  <div class="card">
  <div class="card-label" style="color:var(--gold)">The Catalyst</div>
@@ -946,7 +970,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <strong>The franchise:</strong> Altea PSS. Runs reservations, ticketing, departure control, revenue management for 150+ airlines. No documented PSS departure on public record. 70.9% contribution margin.<br><br>
  <strong>The conglomerate wrapper:</strong> Amadeus also operates GDS distribution (48% of revenue, lower margin, NDC-exposed) and Hospitality & Other (16% of revenue, competitive). Travel analysts apply a single blended multiple to the whole group.<br><br>
  <strong>The catalyst:</strong> No structural separation has occurred yet. The SOTP gap is quantifiable but unrealised. An engagement pointing out that Air IT alone could be worth more than total EV would be the first active voice on a fully passive register.<br><br>
- <strong>Market cap:</strong> €20.9bn. The gap between where comparable mission-critical software trades (35-40x) and the blended group multiple (9.5x) is the mispricing.
+ <strong>Market cap:</strong> €20.9bn. The gap between where comparable mission-critical software trades (26-41x) and the blended group multiple (9.5x) is the mispricing.
  </div>
  </div>
 </div>
@@ -1053,7 +1077,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <div class="metric-cell">
  <div class="mc-val" style="color:var(--fortress)">€1,563m</div>
  <div class="mc-label">Air IT Contribution</div>
- <div style="font-size:10px; color:var(--text-dim); margin-top:4px;">70.9% margin · Fair multiple: 18–25× (disc. from 35–40× comps)</div>
+ <div style="font-size:10px; color:var(--text-dim); margin-top:4px;">70.9% margin · Fair multiple: 18–25× (disc. from 26-41x comps)</div>
  </div>
 </div>
 </div>
@@ -1067,7 +1091,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 
  <p style="margin-top:14px;">"Air IT contains the PSS franchise. The Altéa Passenger Service System runs reservations, ticketing, departure control, and revenue management for over 150 airlines. There is no documented case of an airline departing Amadeus PSS on public record. Switching takes 18–36 months of dual-system running, costs $50–200 million, and risks grounding your fleet. PSS fees are less than 2% of airline revenue. The cost of failure is existential. No CEO will take that trade. This is infrastructure lock-in - the same dynamics that keep banks on legacy systems for decades.</p>
 
- <p style="margin-top:14px;">"The Air IT Solutions segment - which contains Altea PSS, Navitaire, Airport IT and Expert Services - generates €1,563m of contribution at a 70.9% margin. That is 47% of total segment contribution on 36% of revenue. Comparable mission-critical software trades at 35–40× on contribution. Even at 18–25× (discounted for cyclicality and non-PSS sub-segments), Air IT alone is worth €28–39 billion. Total enterprise value today is €23.2bn.</p>
+ <p style="margin-top:14px;">"The Air IT Solutions segment - which contains Altea PSS, Navitaire, Airport IT and Expert Services - generates €1,563m of contribution at a 70.9% margin. That is 47% of total segment contribution on 36% of revenue. Comparable mission-critical software trades at 26-41x on contribution. Even at 18–25× (discounted for cyclicality and non-PSS sub-segments), Air IT alone is worth €28–39 billion. Total enterprise value today is €23.2bn.</p>
 
  <p style="margin-top:14px;">"The second business - Hospitality and Payments - is durable. €249m EBIT, growing, worth €5–6 billion.</p>
 

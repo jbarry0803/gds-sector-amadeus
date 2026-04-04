@@ -274,7 +274,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 /* RESPONSIVE */
 /* MOBILE & TABLET */
 @media (max-width: 1100px) {
- .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
+ .grid-2.grid-3.grid-4.grid-5 { grid-template-columns: 1fr; }
  .tab-btn { padding: 10px 12px; font-size: 9px; }
 }
 @media (max-width: 768px) {
@@ -301,7 +301,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  .mc-val { font-size: 18px; }
  .synth { padding: 14px 16px; }
  .synth h3 { font-size: 14px; }
- .grid-2, .grid-3, .grid-4, .grid-5 { gap: 10px; }
+ .grid-2.grid-3.grid-4.grid-5 { gap: 10px; }
  .cell-val { font-size: 11px; }
  .section-label { font-size: 8px; letter-spacing: 0.2em; }
  .bar-label { font-size: 7px; }
@@ -348,10 +348,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <h1>Amadeus IT Group - <span class="gr">GDS Sector Analysis</span></h1>
  <div class="subtitle"></div>
  <div class="meta-row">
- <span>Joe Barry - March 2026</span>
- <span>March 2026</span>
- <span>Prepared by Joe Barry</span>
- <span>Consolidates: GDS Decomposition · Market Structure · Intelligence · TSR Analysis</span>
+ <span>Joe Barry · March 2026 · GDS Sector Analysis</span>
  </div>
 </div>
 </div>
@@ -362,7 +359,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <button class="tab-btn active" onclick="switchTab('exec')">① Executive Summary</button>
  <button class="tab-btn" onclick="switchTab('monopoly')">② Market Structure</button>
  <button class="tab-btn" onclick="switchTab('sotp')">③ SOTP & Discount</button>
- <button class="tab-btn" onclick="switchTab('tsr')">④ TSR & Valuation</button>
+ <button class="tab-btn" onclick="switchTab('tsr')">④ Returns & Valuation</button>
  <button class="tab-btn" onclick="switchTab('fih')">⑤ FIH Comparison</button>
  <button class="tab-btn" onclick="switchTab('cram')">⑥ Key Data</button>
  <button class="tab-btn" onclick="switchTab('sources')">⑦ Sources</button>
@@ -378,7 +375,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <div class="section">
 <div class="section-label"></div>
 <h2 style="font-size:20px; line-height:1.5; max-width:1100px;">
- Amadeus IT's Passenger Service System is a <span style="color:var(--ams-green)">near-zero-churn mission-critical platform</span> processing airline operations for 150+ carriers, buried inside a conglomerate structure that causes the market to apply a <span style="color:var(--gold)">blended travel-sector multiple</span> instead of the <span style="color:var(--fortress)">26-41x enterprise software multiple</span> the franchise deserves - creating a quantifiable SOTP gap that can be closed by catalyst.
+ Amadeus IT's Passenger Service System is a <span style="color:var(--ams-green)">very-low-churn mission-critical software platform</span> processing airline operations for 200+ carriers, buried inside a conglomerate structure that causes the market to apply a <span style="color:var(--gold)">blended travel-sector multiple</span> instead of the <span style="color:var(--fortress)">22-36x range at which comparable enterprise software trades</span> (see § 3.2) - creating a quantifiable SOTP gap that can be closed by re-coverage or shareholder engagement.
 </h2>
 </div>
 
@@ -389,14 +386,14 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <div class="metric-cell"><div class="mc-val" style="color:var(--fortress)"><span class="src">€1,563m<span class="tip"><strong>Source:</strong> Amadeus FY2024 Results Presentation, slide 10. Air IT Solutions contribution margin 70.9% on revenue €2,204.7m.</span></span></div><div class="mc-label">Air IT Contribution</div></div>
  <div class="metric-cell"><div class="mc-val" style="color:var(--gold)">9.5×</div><div class="mc-label">Blended EV/EBITDA</div></div>
  <div class="metric-cell"><div class="mc-val" style="color:var(--ams-green)">€28–39bn</div><div class="mc-label">Air IT standalone value</div></div>
- <div class="metric-cell"><div class="mc-val" style="color:var(--red)">Near 0</div><div class="mc-label">PSS departures in 20 years</div></div>
+ <div class="metric-cell"><div class="mc-val" style="color:var(--red)">&lt;10</div><div class="mc-label">Voluntary PSS departures in 20 years (of 200+)</div></div>
 </div>
 <div class="metric-strip grid-5">
- <div class="metric-cell"><div class="mc-val" style="color:var(--text-bright)">150+</div><div class="mc-label">Airlines on PSS</div></div>
+ <div class="metric-cell"><div class="mc-val" style="color:var(--text-bright)">200+</div><div class="mc-label">Airlines on PSS (Altea + Navitaire)</div></div>
  <div class="metric-cell"><div class="mc-val" style="color:var(--text-bright)">18–36mo</div><div class="mc-label">Migration timeline</div></div>
- <div class="metric-cell"><div class="mc-val" style="color:var(--text-bright)">&lt;2%</div><div class="mc-label">PSS cost as % of airline rev</div></div>
+ <div class="metric-cell"><div class="mc-val" style="color:var(--text-bright)">&lt;1%</div><div class="mc-label">Est. PSS cost as % of airline rev</div></div>
  <div class="metric-cell"><div class="mc-val" style="color:var(--pfc-amber)">–61%</div><div class="mc-label">COVID rev trough (2020)</div></div>
- <div class="metric-cell"><div class="mc-val" style="color:var(--ams-green)"><span class="src">110%<span class="tip"><strong>Source:</strong> FY2019 EBITDA €2,228m (CIQ). FY2025 EBITDA ~€2,448m. Ratio: 109.9%.</span></span></div><div class="mc-label">2025 EBITDA vs 2019</div></div>
+ <div class="metric-cell"><div class="mc-val" style="color:var(--ams-green)"><span class="src">~110%<span class="tip"><strong>Source:</strong> FY2019 EBITDA €2,228m (CIQ). FY2025 EBITDA ~€2,448m. Ratio: 109.9%.</span></span></div><div class="mc-label">2025 vs 2019 EBITDA (IFRS, per CIQ)</div></div>
 </div>
 </div>
 
@@ -406,8 +403,8 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <div class="card tier-fortress" style="padding-left:20px;">
  <div class="card-label" style="color:var(--fortress)">Layer 1 - PSS Franchise</div>
  <div class="card-body">
- <strong>Passenger Service System.</strong> Reservations, ticketing, departure control, revenue management for 150+ airlines. PSS departures are rare - a handful of cases in 20 years, mostly to Sabre in 2013-2015. Flow has since reversed (e.g. Vietnam Airlines, Etihad back to Amadeus). 18-36 month migration risk makes switching dangerous. Air IT Solutions segment revenue: €2.2bn. Segment contribution: €1,563m. <strong>Contribution margin: 70.9%.</strong> <br><br>
- <strong>Standalone value: €28–39bn</strong> (18–25× on verified €1,563m contribution, discounted for inclusion of Airport IT and Expert Services sub-segments). This EXCEEDS total current EV of €23.2bn.
+ <strong>Passenger Service System.</strong> Reservations, ticketing, departure control, revenue management for 200+ airlines. PSS departures are rare - a handful of cases in 20 years, mostly to Sabre in 2013-2015. Flow has since reversed (e.g. Vietnam Airlines (signed 2023, migrated 2024), Etihad back to Amadeus (2023)). 18-36 month migration risk makes switching dangerous. Air IT Solutions segment revenue: €2.2bn. Segment contribution: €1,563m. <strong>Contribution margin: 70.9%.</strong> <br><br>
+ <strong>Estimated standalone value: €28-39bn</strong> (18–25× on verified €1,563m contribution, discounted for inclusion of Airport IT and Expert Services sub-segments). This EXCEEDS total current EV of €23.2bn.
  </div>
  </div>
  <div class="card tier-durable" style="padding-left:20px;">
@@ -428,7 +425,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 
 <div class="synth">
  <h3>The Gap</h3>
- <p><strong>Sum-of-parts: €36–52bn.</strong> Current EV: €23.2bn. The gap is €12–29bn, or <strong>53–126% upside</strong> to a reasonable SOTP. If enterprise software analysts covered PSS as a standalone, the multiple would reprice to 26-41x. This is a structural classification error.</p>
+ <p><strong>Sum-of-parts: €36–52bn.</strong> Current EV: €23.2bn. The gap is €12–29bn, or <strong>53–126% upside</strong> to a reasonable SOTP. If enterprise software analysts covered PSS as a standalone, the multiple would reprice to 22-36x. This is a structural classification error.</p>
 </div>
 </div>
 
@@ -438,22 +435,22 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <div class="card">
  <div class="card-label" style="color:var(--gold)">Dominant Position</div>
  <div class="card-val" style="font-size:18px; color:var(--ams-green)">✓</div>
- <div class="card-body">Near-zero churn. A handful of PSS switches in 20 years (LAN to Sabre 2010, LATAM consolidation on Sabre 2015, Etihad to Sabre 2013 then back to Amadeus). Switching costs are extreme - 18-36 months dual running.</div>
+ <div class="card-body">Very low voluntary churn. Fewer than 10 competitive PSS switches in 20 years out of 200+ airlines, mostly concentrated in 2013-2015 (LATAM consolidated on Sabre 2015, Etihad to Sabre 2013 - returned to Amadeus 2023). Flow has since reversed. Russian airlines forced off Western PSS post-2022 sanctions (geopolitical, not competitive). Switching costs are extreme - 18-36 months dual running.</div>
  </div>
  <div class="card">
  <div class="card-label" style="color:var(--gold)">Conglomerate Discount</div>
  <div class="card-val" style="font-size:18px; color:var(--ams-green)">✓</div>
- <div class="card-body">PSS hidden inside IT Solutions + Hospitality. Same structure as a classic conglomerate (dominant asset inside commodity wrapper), FNF (title insurance inside annuities), Alphabet (Search inside "Other Bets").</div>
+ <div class="card-body">PSS hidden inside IT Solutions + Hospitality. Same structure as a classic conglomerate (dominant asset inside commodity wrapper), Alphabet (Search inside "Other Bets").</div>
  </div>
  <div class="card">
  <div class="card-label" style="color:var(--gold)">Institutional Scale</div>
  <div class="card-val" style="font-size:18px; color:var(--ams-green)">✓</div>
- <div class="card-body">€20.9bn market cap. IBEX 35. 1% position = €209m.</div>
+ <div class="card-body">€20.9bn market cap (March 2026). IBEX 35. 1% position = €209m.</div>
  </div>
  <div class="card">
  <div class="card-label" style="color:var(--gold)">10+ Year Hold</div>
  <div class="card-val" style="font-size:18px; color:var(--ams-green)">✓</div>
- <div class="card-body">Global air travel grows 3–5% annually regardless of cycle. PSS pricing power adds 2–3% on top. The compounding engine works for decades. </div>
+ <div class="card-body">Global air travel grows 3-4% annually on a long-term secular basis (IATA: 3.1% CAGR 2024-2050). PSS pricing power adds 4-5% on top (FY2024: +4.4% rev/PB, FY2025: +4.7%). </div>
  </div>
 </div>
 </div>
@@ -520,7 +517,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 </tr>
 <tr>
  <td>Operational Failure Risk</td>
- <td>If the new PSS fails during cutover, the airline cannot check in passengers, cannot issue boarding passes, cannot manage revenue. Flights are grounded or operated manually (paper manifests). The reputational and financial cost of even a single day of system failure exceeds years of PSS fees. <strong>British Airways' 2017 IT failure cost £80M+ in a single weekend.</strong></td>
+ <td>If the new PSS fails during cutover, the airline cannot check in passengers, cannot issue boarding passes, cannot manage revenue. Flights are grounded or operated manually (paper manifests). The reputational and financial cost of even a single day of system failure exceeds years of PSS fees. <strong>British Airways' 2017 data centre power failure cost £80M+ in a single weekend - illustrating the catastrophic cost of airline IT outages, even outside of PSS migration.</strong></td>
  <td class="cell-val" style="color:var(--red)">EXISTENTIAL</td>
 </tr>
 <tr>
@@ -530,12 +527,12 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 </tr>
 <tr>
  <td>Cost vs. Value</td>
- <td>PSS fees represent <strong>&lt;2% of airline revenue</strong>. The cost of switching (migration project, operational risk, 2+ years of dual running) vastly exceeds any savings from a cheaper provider. </td>
+ <td>PSS fees are estimated at <strong>&lt;1% of airline revenue</strong> for most carriers. Amadeus Air IT FY2024 revenue was €2,204.7m on 2,164m passengers boarded, or approximately €1.02 per passenger. A mid-size airline processing 20m passengers on €5bn revenue would pay approximately €20m, or 0.4% of revenue. A large carrier (80m passengers, €30bn revenue) would pay approximately €80m, or 0.27%. Note: Air IT includes Airport IT and Expert Services, so pure PSS cost per passenger is lower than €1.02. For context, fuel is 25-29% of airline costs and labour is 28% (IATA, 2024-2026). The cost of switching vastly exceeds any potential PSS savings.<br><br><span style="font-size:9px;color:var(--text-faint)">Sources: Amadeus FY2024 Results Presentation (Air IT revenue €2,204.7m, PB 2,164m). IATA "Unveiling the biggest airline costs" (2024) and IATA 2026 profitability forecast for fuel/labour shares. No single public source directly states "&lt;1%" for PSS costs - this is the author's derivation from public data.</span> </td>
  <td class="cell-val" style="color:var(--gold)">STRUCTURAL</td>
 </tr>
 <tr>
  <td>Competitive Alternatives</td>
- <td><strong>Sabre:</strong> $3.7bn net debt, –92% TSR over 10 years, negative free cash flow, functionally uninvestable as a long-term PSS partner. <strong>Travelport:</strong> Private, small, limited airline portfolio. <strong>In-house:</strong> Only feasible for the largest carriers (Lufthansa, Delta) who built proprietary systems over many years. For the vast majority of airlines, the alternatives are limited.</td>
+ <td><strong>Sabre:</strong> $3.7bn net debt, –92% price return over 10 years, negative free cash flow (FY2025 reported FCF: -$192m per Sabre), functionally uninvestable as a long-term PSS partner. <strong>Travelport:</strong> Private, small, limited airline portfolio. <strong>In-house:</strong> Only feasible for the largest carriers (Lufthansa, Delta) who built proprietary systems over many years. For the vast majority of airlines, the alternatives are limited.</td>
  <td class="cell-val" style="color:var(--ams-green)">NO ALTERNATIVE</td>
 </tr>
 </tbody>
@@ -552,7 +549,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <div class="card-label" style="color:var(--gold)">GDS Distribution (Booking Pipe)</div>
  <div class="card-body" style="font-size:12.5px; line-height:1.8;">
  <strong>Three-player oligopoly.</strong> All three GDS providers compete for travel agency bookings.<br><br>
- <span style="color:var(--ams-green); font-family:'IBM Plex Mono',monospace; font-weight:600;">Amadeus: ~40%</span> - market leader in Europe, strong in APAC. ~450m bookings (FY2024).<br>
+ <span style="color:var(--ams-green); font-family:'IBM Plex Mono',monospace; font-weight:600;">Amadeus: ~40%</span> - market leader in Europe, strong in APAC. ~471m bookings (FY2024).<br>
  <span style="color:var(--text-dim); font-family:'IBM Plex Mono',monospace; font-weight:600;">Sabre: ~35%</span> - leader in North America, extends into Asia via Abacus. ~300m bookings.<br>
  <span style="color:var(--text-dim); font-family:'IBM Plex Mono',monospace; font-weight:600;">Travelport: ~22%</span> - Galileo + Apollo + Worldspan. Smallest of the three.<br>
  <span style="color:var(--text-faint); font-family:'IBM Plex Mono',monospace; font-weight:600;">Others: ~3%</span> - Infini (Japan), Sirena (Russia), TravelSky (China domestic).<br><br>
@@ -564,16 +561,16 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <div class="card-body" style="font-size:12.5px; line-height:1.8;">
  <strong>Near-monopoly.</strong> Only two third-party providers exist. One is financially dying.<br><br>
  <span style="color:var(--ams-green); font-family:'IBM Plex Mono',monospace; font-weight:600;">Amadeus (Altea + Navitaire): 2,164m passengers boarded (FY2024)</span> - 46% of global passengers (IATA ~4.7bn). 200+ airlines. Dominant in both full-service and low-cost carriers.<br>
- <span style="color:var(--text-dim); font-family:'IBM Plex Mono',monospace; font-weight:600;">Sabre (SabreSonic): ~15-20%</span> of outsourced. Key clients: WestJet, JetBlue, Alaska Airlines, LATAM. Shrinking as airlines migrate away (Vietnam Airlines left for Amadeus, 2023).<br>
+ <span style="color:var(--text-dim); font-family:'IBM Plex Mono',monospace; font-weight:600;">Sabre (SabreSonic): ~15-20%</span> of outsourced. Key clients: WestJet, JetBlue, Alaska Airlines, LATAM. Shrinking as airlines migrate away (Vietnam Airlines, signed 2023, migrated 2024).<br>
  <span style="color:var(--red); font-family:'IBM Plex Mono',monospace; font-weight:600;">Travelport: 0%</span> - <strong>Travelport has no PSS product at all.</strong> Pure distribution.<br>
  <span style="color:var(--text-dim); font-family:'IBM Plex Mono',monospace; font-weight:600;">Others: ~20-25%</span> - SITA, Lufthansa Systems, TravelSky (China only), IBS Software.<br><br>
- <em style="color:var(--text-dim)">Note: ~800-1,000m passengers fly on in-house PSS (Delta, United, Emirates, Southwest, Turkish). Amadeus processes 46% of all global airline passengers.</em><br>
- <em style="color:var(--text-dim)">Sources: Amadeus FY2024 Results (PB: 2,164m exact); IATA (~4.7bn global pax); AltexSoft ("three leaders hold over 60% of air reservation market"); Bamboo Airways PR (Jan 2026: "200 airlines already using Amadeus PSS"); Walter Scott analysis (Mar 2024).</em>
+ <em style="color:var(--text-dim)">Note: ~700-900m passengers fly on in-house PSS (Delta, United, Emirates, Southwest, Turkish). Amadeus processes 46% of all global airline passengers.</em><br>
+ <em style="color:var(--text-dim)">Sources: Amadeus FY2024 Results (PB: 2,164m exact); IATA (~4.7bn global pax); AltexSoft ("three leaders hold over 60% of air reservation market"); Amadeus FY2019 Annual Report (216 contracted PSS customers, 208 implemented).</em>
  </div>
  </div>
 </div>
 
-<p style="margin-top:16px;"></p>
+
 </div>
 
 <div class="section">
@@ -583,23 +580,22 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <div class="grid-2">
  <div class="card">
  <div class="card-label" style="color:var(--ams-green)">Revenue per Booking Growth</div>
- <div class="card-val" style="font-size:20px;">3–5% CAGR</div>
- <div class="card-body">Amadeus has consistently grown revenue per booking at 4-6% annually for the last two years (FY2024: +6.0%, FY2025: +4.7% at constant currency). This is pure pricing power. Airlines absorb the increases because PSS costs are immaterial relative to total operations (&lt;2% of revenue) and switching is impossible. Amadeus Air IT revenue of €2.2bn across 150+ airlines equates to less than 0.25% of global airline industry revenue ($965bn per IATA, 2024).</div>
+ <div class="card-val" style="font-size:20px;">4–6% CAGR</div>
+ <div class="card-body">Amadeus has consistently grown revenue per booking at 4-6% annually for the last two years (FY2024: +6.0%, FY2025: +4.7% at constant currency). This is pure pricing power. Airlines absorb the increases because PSS costs are immaterial relative to total operations (&lt;1% of revenue for most carriers) and switching is impossible. At approximately €1.02 per passenger boarded (Air IT FY2024 revenue €2,204.7m / 2,164m PB), PSS costs are estimated at well below 1% of airline revenue for most carriers.</div>
  </div>
  <div class="card">
  <div class="card-label" style="color:var(--ams-green)">Contract Structure</div>
  <div class="card-val" style="font-size:20px;">10–15yr terms</div>
- <div class="card-body">PSS contracts run 10–15 years with <strong>automatic escalators</strong> (CPI + spread). Renewal rates are very high. Departures in the last decade have been rare and mostly linked to merger consolidation (LATAM) or regional factors (Russian sanctions). The contract provides revenue visibility spanning over a decade. For a concentrated long-hold fund like , this is the ideal compounding engine: predictable, growing, and protected by contract for longer than most fund lives.</div>
+ <div class="card-body">PSS contracts run 10–15 years with <strong>automatic escalators</strong> (CPI + spread). Renewal rates are very high. Departures in the last decade have been rare and mostly linked to merger consolidation (LATAM) or regional factors (Russian sanctions). The contract provides revenue visibility spanning over a decade. For a concentrated long-hold fund, this is the ideal compounding engine: predictable, growing, and protected by contract for longer than most fund lives.</div>
  </div>
 </div>
 
 <div class="synth">
  <h3>Amadeus vs. Comparable Software</h3>
- <p></p>
- <p></p>
- <p><strong>SAP ERP:</strong> Runs back-office of 87% of Fortune 500. Switching takes 2-5 years. S/4HANA migration forces reinvestment, not departure. <strong>Same.</strong></p>
- <p><strong>TransDigm:</strong> 90% sole-source aerospace parts. FAA recertification required for alternatives (18-36 months). Pentagon investigated pricing - found no alternative. <strong>Same.</strong></p>
- <p></p>
+
+ <p><strong>SAP ERP:</strong> Runs back-office systems for most large global enterprises. Switching takes 2-5 years. S/4HANA migration forces reinvestment, not departure. <strong>Same.</strong></p>
+ <p><strong>TransDigm:</strong> 90% sole-source aerospace parts. FAA recertification required for alternatives (18-36 months). Pricing power repeatedly demonstrated despite regulatory scrutiny. <strong>Same.</strong></p>
+ 
 </div>
 </div>
 
@@ -612,11 +608,11 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <div class="card-label" style="color:var(--red)">The Transaction</div>
  <div class="card-body" style="font-size:12.5px; line-height:1.8;">
  <strong>Seller:</strong> Sabre Corporation (NASDAQ: SABR)<br>
- <strong>Buyer:</strong> TPG Capital (with MCR Hotels as strategic minority investor)<br>
+ <strong>Buyer:</strong> TPG Capital<br>
  <strong>Price:</strong> $1.1bn cash<br>
  <strong>Net proceeds to Sabre:</strong> approximately $960m after taxes and fees (per Sabre 8-K)<br>
  <strong>Use of proceeds:</strong> Debt repayment<br>
- <strong>Announced:</strong> April 28, 2025. <strong>Closed:</strong> July 7, 2025.<br><br>
+ <strong>Announced:</strong> April 28, 2025. <strong>Closed:</strong> July 7, 2025. MCR Hotels joined as strategic minority investor at closing.<br><br>
  <strong>The asset:</strong> SynXis platform - SaaS-based hotel reservation, distribution, and guest management technology. Serves 40%+ of the world's leading hotel brands. FY2024 revenue: $327m, growing 8%+ YoY.<br><br>
  <strong>Implied multiples:</strong><br>
  EV/Revenue: 3.4x ($1.1bn / $327m FY2024 revenue)<br><br>
@@ -627,8 +623,8 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <div class="card-label" style="color:var(--ams-green)">What It Means for the Amadeus Thesis</div>
  <div class="card-body" style="font-size:12.5px; line-height:1.8;">
  Net proceeds of $960m went to debt repayment. Sabre still has $3.7bn net debt after the sale. <br><br>
- Post-sale, Sabre is predominantly dependent on transaction-based air travel volumes (Hospitality was 10.8% of FY2024 revenue: $327m of $3,030m total).<br><br>
- TPG paid 3.4x revenue. Amadeus Hospitality (€991m revenue, growing 12%) would be €3.4bn at the same multiple (€991m x 3.4x).<br><br>
+ Post-sale, Sabre is predominantly dependent on transaction-based air travel volumes (Hospitality was 10.8% of FY2024 revenue: $327m of $3,030m total). Sabre's financial distress reduces competitive pressure on Amadeus and reinforces PSS pricing power.<br><br>Post-sale, Sabre is a weaker, more leveraged, single-product competitor - reinforcing Amadeus's pricing power and reducing the probability of competitive PSS displacement.
+ <br><br>
  
  </div>
  </div>
@@ -665,7 +661,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <td style="text-align:right" class="cell-val">€2.2bn</td>
  <td style="text-align:right" class="cell-val">€1,563m</td>
  <td style="text-align:right" class="cell-val">70.9%</td>
- <td>Dominant position. Near-zero churn (handful of departures in 20 years). 150+ airlines. 70.9% contribution margin. Revenue per PB growing +4.4%. Comparable infra software at 26-41x. Discounted for cyclicality and inclusion of Airport IT/Expert Services sub-segments.</td>
+ <td>Dominant position. Very low voluntary churn (<10 competitive switches in 20 years out of 200+ airlines, mostly 2013-2015; Russian sanctions departures were geopolitical, not competitive). 200+ airlines. 70.9% contribution margin. Revenue per PB growing +4.4%. Comparable infra software trades at 22-36x EV/EBITDA. Discounted for cyclicality and inclusion of Airport IT/Expert Services sub-segments.</td>
  <td style="text-align:right" class="cell-val" style="color:var(--fortress)">18–25×</td>
  <td style="text-align:right; color:var(--fortress); font-weight:700; font-size:14px">€28.1–39.1bn</td>
 </tr>
@@ -688,13 +684,27 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <td style="text-align:right; color:var(--text-dim); font-weight:700">€4.1–6.2bn</td>
 </tr>
 <tr style="background:rgba(201,168,76,0.06)">
- <td style="color:var(--gold)"><strong>TOTAL SOTP</strong></td>
+ <td style="color:var(--gold)"><strong>SEGMENT TOTAL</strong></td>
  <td style="text-align:right" class="cell-val">€6.5bn</td>
  <td style="text-align:right" class="cell-val">€3,297m</td>
  <td style="text-align:right" class="cell-val"> - </td>
  <td></td>
  <td></td>
- <td style="text-align:right; color:var(--gold); font-weight:700; font-size:16px">€35.6–52.4bn</td>
+ <td style="text-align:right; color:var(--gold); font-weight:700; font-size:15px">€43.3-62.0bn</td>
+</tr>
+<tr>
+ <td style="color:var(--text-dim)">Less: Capitalised net indirect costs<br><span style="font-size:9px">Corporate overhead, cloud migration, transversal R&D</span></td>
+ <td></td>
+ <td style="text-align:right" class="cell-val">€962m</td>
+ <td></td>
+ <td></td>
+ <td style="text-align:right" class="cell-val">8-10x</td>
+ <td style="text-align:right; color:var(--red)">(€7.7-9.6bn)</td>
+</tr>
+<tr style="border-top:2px solid var(--border-bright); background:rgba(201,168,76,0.08)">
+ <td style="color:var(--gold)"><strong>NET SOTP</strong></td>
+ <td colspan="5"><span style="font-size:10px;color:var(--text-dim)">€43.3bn - €7.7bn = €35.6bn (low); €62.0bn - €9.6bn = €52.4bn (high)</span></td>
+ <td style="text-align:right; color:var(--gold); font-weight:700; font-size:16px">€35.6-52.4bn</td>
 </tr>
 <tr style="background:rgba(212,68,68,0.06)">
  <td style="color:var(--red)"><strong>CURRENT EV</strong></td>
@@ -729,45 +739,45 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <tbody>
 <tr>
  <td><strong>ServiceNow</strong><br><span style="font-size:9px;color:var(--text-dim)">NYSE: NOW</span></td>
- <td style="text-align:right" class="cell-val">$111.5bn</td>
- <td style="text-align:right" class="cell-val">40.7x</td>
+ <td style="text-align:right" class="cell-val">$99bn</td>
+ <td style="text-align:right" class="cell-val">36.2x</td>
  <td>IT workflow system of record. Incident management, HR, security ops.</td>
  <td class="cell-val">97%+</td>
- <td style="font-size:9px;color:var(--text-dim)">StockAnalysis.com<br>4 Mar 2026</td>
+ <td style="font-size:9px;color:var(--text-dim)">StockAnalysis.com<br>Apr 2026</td>
 </tr>
 <tr>
  <td><strong>Tyler Technologies</strong><br><span style="font-size:9px;color:var(--text-dim)">NYSE: TYL</span></td>
- <td style="text-align:right" class="cell-val">$14.6bn</td>
- <td style="text-align:right" class="cell-val">32.0x</td>
+ <td style="text-align:right" class="cell-val">$14.1bn</td>
+ <td style="text-align:right" class="cell-val">32.4x</td>
  <td>Government software. Sole provider to municipalities. Procurement lock-in.</td>
  <td class="cell-val">98%+</td>
- <td style="font-size:9px;color:var(--text-dim)">StockAnalysis.com<br>10 Mar 2026</td>
+ <td style="font-size:9px;color:var(--text-dim)">StockAnalysis.com<br>Apr 2026</td>
 </tr>
 <tr>
  <td><strong>Veeva Systems</strong><br><span style="font-size:9px;color:var(--text-dim)">NYSE: VEEV</span></td>
- <td style="text-align:right" class="cell-val">$25.7bn</td>
- <td style="text-align:right" class="cell-val">26.1x</td>
+ <td style="text-align:right" class="cell-val">$22bn</td>
+ <td style="text-align:right" class="cell-val">22.3x</td>
  <td>Life sciences CRM and regulatory. Switching requires FDA revalidation.</td>
- <td class="cell-val">~95%</td>
- <td style="font-size:9px;color:var(--text-dim)">StockAnalysis.com<br>6 Mar 2026</td>
+ <td class="cell-val">~95% (pre-Salesforce re-entry; may be declining)</td>
+ <td style="font-size:9px;color:var(--text-dim)">StockAnalysis.com<br>Apr 2026</td>
 </tr>
 <tr style="border-top:2px solid var(--border-bright)">
  <td colspan="2" style="text-align:right;color:var(--text-dim)"><strong>Comp range</strong></td>
- <td style="text-align:right;color:var(--gold)" class="cell-val"><strong>26-41x</strong></td>
+ <td style="text-align:right;color:var(--gold)" class="cell-val"><strong>22-36x</strong></td>
  <td colspan="3"></td>
 </tr>
 <tr style="background:var(--surface2)">
  <td><strong>Amadeus Air IT</strong><br><span style="font-size:9px;color:var(--ams-green)">Not separately traded</span></td>
  <td style="text-align:right" class="cell-val">€23.2bn<br><span style="font-size:9px;color:var(--text-dim)">(whole group)</span></td>
  <td style="text-align:right;color:var(--red)" class="cell-val"><strong>9.5x</strong><br><span style="font-size:9px;color:var(--text-dim)">(blended group)</span></td>
- <td>Airline PSS. 18-36 month migration. <2% of airline revenue.</td>
- <td class="cell-val">Near-zero churn</td>
+ <td>Airline PSS. 18-36 month migration. Estimated &lt;1% of airline revenue for most carriers.</td>
+ <td class="cell-val">&lt;10 voluntary departures in 20 years (of 200+)</td>
  <td style="font-size:9px;color:var(--text-dim)">Amadeus FY2024<br>CNMV filing</td>
 </tr>
 <tr style="background:var(--surface2)">
  <td colspan="2" style="text-align:right;color:var(--text-dim)"><strong>Multiple applied in SOTP</strong></td>
  <td style="text-align:right;color:var(--ams-green)" class="cell-val"><strong>18-25x</strong></td>
- <td colspan="3" style="font-size:10px;color:var(--text-dim)">30-55% discount to comp range. For: (a) cyclical revenue (COVID: -61%), (b) includes non-PSS sub-segments (Airport IT, Expert Services), (c) contribution basis not EBITDA.</td>
+ <td colspan="3" style="font-size:10px;color:var(--text-dim)">0-50% discount to comp range. 18x is an 18% discount to the lowest comp (Veeva at 22x); 25x is a 31% discount to the highest comp (ServiceNow at 36x). Discount for: (a) cyclical revenue (COVID: -61%), (b) includes non-PSS sub-segments (Airport IT, Expert Services), (c) contribution basis not EBITDA.</td>
 </tr>
 </tbody>
 </table>
@@ -791,10 +801,10 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <tr><td style="color:var(--gold)">Air Distribution contribution</td><td style="text-align:right" class="cell-val">1,392</td><td>47.3% margin. GDS booking pipe. NDC-exposed.</td></tr>
 <tr><td>Hospitality & Other contribution</td><td style="text-align:right" class="cell-val">342</td><td>34.5% margin. Hotel IT + Payments. Growing.</td></tr>
 <tr style="background:var(--surface2)"><td><strong>Total segment contribution</strong></td><td style="text-align:right" class="cell-val"><strong>3,297</strong></td><td></td></tr>
-<tr style="color:var(--red)"><td>Less: Net indirect costs</td><td style="text-align:right" class="cell-val">(962)</td><td>Cloud migration, R&D (€1.365bn gross), corporate overhead. Growing +15.3% in FY2024 (cloud transition). Management guides moderation in 2026 as cloud migration completes.</td></tr>
+<tr style="color:var(--red)"><td>Less: Net indirect costs</td><td style="text-align:right" class="cell-val">(962)</td><td>Cloud migration, R&D (>€1bn expensed per CIQ; additional capitalised development costs), corporate overhead. Growing +15.3% in FY2024 (cloud transition). Management guides moderation in 2026 as cloud migration completes.</td></tr>
 <tr style="background:var(--surface2)"><td><strong>Group EBITDA</strong></td><td style="text-align:right" class="cell-val"><strong>2,335</strong></td><td>38.0% margin.</td></tr>
-<tr><td>Less: D&A</td><td style="text-align:right" class="cell-val">(700)</td><td>Primarily software amortisation. Declining as cloud migration reduces data centre depreciation.</td></tr>
-<tr style="background:var(--surface2)"><td><strong>Group EBIT</strong></td><td style="text-align:right" class="cell-val"><strong>1,635</strong></td><td>26.6% margin.</td></tr>
+<tr><td>Less: D&A</td><td style="text-align:right" class="cell-val">(653)</td><td>Per S&P Capital IQ FY2024. Primarily software amortisation.</td></tr>
+<tr style="background:var(--surface2)"><td><strong>Group EBIT</strong></td><td style="text-align:right" class="cell-val"><strong>1,682</strong></td><td>26.6% margin (per Amadeus; adjusted basis).</td></tr>
 </tbody>
 </table>
 </div>
@@ -820,7 +830,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <div class="card-label" style="color:var(--info)">The Separation Precedent</div>
  <div class="card-body" style="font-size:13px; line-height:1.8;">
 
- <strong>Re-rating from separation:</strong> significant multiple expansion<br><br>
+ Danaher spun off Fortive (2016) — both entities re-rated as focused businesses. The pattern is consistent across industrial and technology conglomerates: when a high-quality asset separates from a lower-quality wrapper, the market reprices both.
  
  </div>
  </div>
@@ -838,7 +848,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  </div>
  <div class="card">
  <div class="card-label" style="color:var(--ams-green)">Who SHOULD Cover PSS</div>
- <div class="card-body"><strong>Enterprise software analysts</strong> covering SAP, Oracle, ServiceNow, Verint. They understand mission-critical infrastructure with near-zero churn. They apply 26-41x to mission-critical software platforms with contractual revenue. If a single Tier 1 software analyst published a SOTP note on Amadeus, the re-rating conversation would begin.</div>
+ <div class="card-body"><strong>Enterprise software analysts</strong> covering SAP, Oracle, ServiceNow, Veeva. They understand mission-critical infrastructure with very low voluntary churn. They apply 22-36x EV/EBITDA to mission-critical software platforms with contractual revenue. If a single Tier 1 software analyst published a SOTP note on Amadeus, the re-rating conversation would begin.</div>
  </div>
  <div class="card">
  <div class="card-label" style="color:var(--gold)">The Catalyst</div>
@@ -862,31 +872,31 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <div class="container">
 
 <div class="section">
-<div class="section-label">§ 4.1 - Total Shareholder Return</div>
+<div class="section-label">§ 4.1 - Price Return Comparison</div>
 <h2>Same Industry, Same Macro - Opposite Outcomes</h2>
 <div class="sub">Amadeus IT vs Sabre Corporation, indexed from January 2016. The quality gap is the entire story.</div>
 
 <div class="chart-wrap">
  <div class="chart-area"><canvas id="tsrChart"></canvas></div>
  <div style="display:flex; gap:20px; padding-top:10px; border-top:1px solid var(--border); margin-top:10px; font-size:11px;">
- <span style="color:#34d399">■ Amadeus TSR</span>
- <span style="color:#f87171">■ Sabre TSR</span>
+ <span style="color:#34d399">■ Amadeus Price Return</span>
+ <span style="color:#f87171">■ Sabre Price Return</span>
  <span style="color:#60a5fa">┈ Air Passengers (ICAO)</span>
  <span style="color:#fbbf24">┈ Tourist Arrivals (UNWTO)</span>
  </div>
 </div>
 
 <div class="grid-5" style="margin-top:14px;">
- <div class="card"><div class="card-label" style="color:#34d399">Amadeus TSR</div><div class="card-val" style="color:#34d399">+28%</div><div class="card-body">€100 → €128 · 2.5% CAGR · 10.2 years</div></div>
- <div class="card"><div class="card-label" style="color:#f87171">Sabre TSR</div><div class="card-val" style="color:#f87171">–92%</div><div class="card-body">$100 → $8 · –22% CAGR · Destroyed</div></div>
+ <div class="card"><div class="card-label" style="color:#34d399">Amadeus Price Return</div><div class="card-val" style="color:#34d399">+28%</div><div class="card-body">€100 → €128 · 2.5% CAGR · 10.2 years</div></div>
+ <div class="card"><div class="card-label" style="color:#f87171">Sabre Price Return</div><div class="card-val" style="color:#f87171">–92%</div><div class="card-body">$100 → $8 · –22% CAGR · Destroyed</div></div>
  <div class="card"><div class="card-label" style="color:var(--wa-purple)">Divergence</div><div class="card-val" style="color:var(--wa-purple)">121pp</div><div class="card-body">Long AMS / Short SABR cumulative spread</div></div>
- <div class="card"><div class="card-label" style="color:#60a5fa">Air Passengers</div><div class="card-val" style="color:#60a5fa">+50%</div><div class="card-body">3.47bn → 5.2bn · 14% above 2019</div></div>
- <div class="card"><div class="card-label" style="color:#fbbf24">Tourist Arrivals</div><div class="card-val" style="color:#fbbf24">+28%</div><div class="card-body">1.19bn → 1.52bn · 3% above 2019</div></div>
+ <div class="card"><div class="card-label" style="color:#60a5fa">Air Passengers</div><div class="card-val" style="color:#60a5fa">+41%</div><div class="card-body">3.7bn → 5.2bn · 14% above 2019</div></div>
+ <div class="card"><div class="card-label" style="color:#fbbf24">Tourist Arrivals</div><div class="card-val" style="color:#fbbf24">+23%</div><div class="card-body">1.24bn → 1.52bn · 3% above 2019</div></div>
 </div>
 
 <div class="synth">
- <h3>TSR Divergence</h3>
- <p>Global air passengers grew 50%. Tourist arrivals grew 28%. Amadeus returned +28%. Sabre returned –92%. The macro was identical. The technology is similar. The markets served overlap. <strong>121 percentage points of divergence over 10 years.</strong></p>
+ <h3>Price Return Divergence</h3>
+ <p>Global air passengers grew ~41%. Tourist arrivals grew ~23%. Amadeus price return: +28%. Sabre price return: –92%. The macro was identical. The technology is similar. The markets served overlap. <strong>121 percentage points of divergence over 10 years. Note: chart shows price return only. Amadeus total return including dividends (~€5-6/share cumulative since 2019) is higher.</strong></p>
  <p>Sabre's collapse <strong>strengthens</strong> Amadeus's market position. With Sabre financially impaired and unable to invest in product development, airlines have even fewer alternatives. COVID didn't weaken the Amadeus franchise - it severely impaired the only third-party alternative.</p>
 </div>
 </div>
@@ -901,8 +911,8 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <th style="width:150px">Scenario</th>
  <th style="width:100px;text-align:right">Target EV/EBITDA</th>
  <th style="width:120px;text-align:right">Implied Price</th>
- <th style="width:100px;text-align:right">Upside</th>
- <th style="width:100px;text-align:right">10yr CAGR</th>
+ <th style="width:100px;text-align:right">Price Upside (current EBITDA)</th>
+ <th style="width:100px;text-align:right">10yr Total Return CAGR</th>
  <th>Assumptions</th>
 </tr></thead>
 <tbody>
@@ -935,9 +945,10 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 </div>
 
 <div class="synth">
- <h3>Return Expectations</h3>
- <p></p>
- <p>Amadeus at base case: <strong>approximately 2x over 10 years (12–15% CAGR)</strong>. At bull case: <strong>3–5× (18–22% CAGR)</strong>. The re-rating requires a specific catalyst (analyst re-coverage or shareholder engagement). At €48.6 entry: <em>organic compounding alone clears the hurdle rate. The re-rating is the bonus, not the requirement.</em></p>
+ <p style="font-size:10px; color:var(--text-faint); margin-top:8px; margin-bottom:16px;">Note: 10yr CAGR represents estimated annualised total return including organic EBITDA growth (~8-10% p.a.), dividend income (~2-3% p.a.), and share buyback accretion - not simply the annualised path from €48.6 to the implied price. The implied price shows the target at the stated exit multiple on current EBITDA; the CAGR reflects compounding of a growing earnings base over the full decade plus reinvested dividends.</p>
+<h3>Return Expectations</h3>
+ 
+ <p>Base case total CAGR of 12-15% reflects organic EBITDA growth compounding at ~8-10% annually plus ~2-3% dividend yield - producing approximately 3-4x total return over the decade. The €95 implied price shown above represents where the stock would trade at 16x on today's EBITDA; on a 10-year forward EBITDA basis the same multiple produces a materially higher terminal value. At bull case: <strong>18-22% total CAGR (5-7x total return)</strong>. The re-rating requires a specific catalyst (analyst re-coverage or shareholder engagement). At €48.6 entry: <em>organic compounding alone clears the hurdle rate. The re-rating is the bonus, not the requirement.</em></p>
 </div>
 </div>
 
@@ -960,17 +971,17 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <div class="card-body" style="font-size:12.5px; line-height:1.8;">
  <strong>The franchise:</strong> Falkland Islands Company. 175-year-old sole provider of essential services (retail, shipping agency, property) for 3,500 people, 8,000 miles from any competitor.<br><br>
  <strong>The conglomerate wrapper:</strong> FIH also owns Momart (art logistics) and until March 2026 owned Portsmouth Harbour Ferry (PHFC). Two loss-making sub-segments (FBS Construction, Momart Exhibitions) suppressed the group multiple to 3.9x EBITDA.<br><br>
- <strong>The catalyst:</strong> PHFC sold to Collins River / Uber Boat at 12.6x pre-IFRS 16 EBITDA in March 2026. Strategic buyer paid 12.6x. Remaining portfolio (FIC + Momart) available at 4.7x implied (derived: post-disposal EV / rump EBITDA).<br><br>
- <strong>Market cap:</strong> £33.5m. The gap between PHFC's sale multiple (12.6x) and the rump entry (4.7x) is the mispricing.
+ <strong>The catalyst:</strong> PHFC sold to Collins River / Uber Boat at 12.6x pre-IFRS 16 EBITDA in March 2026. Strategic buyer paid 12.6x. Remaining portfolio (FIC + Momart) available at 3.2x implied (derived: post-disposal EV £15.4m / rump EBITDA £4,780k).<br><br>
+ <strong>Market cap:</strong> £33.5m. The gap between PHFC's sale multiple (12.6x) and the rump entry (3.2x) is the mispricing.
  </div>
  </div>
  <div class="card" style="border-top:3px solid var(--ams-green)">
  <div class="card-label" style="color:var(--ams-green)">Amadeus IT (BME: AMS)</div>
  <div class="card-body" style="font-size:12.5px; line-height:1.8;">
- <strong>The franchise:</strong> Altea PSS. Runs reservations, ticketing, departure control, revenue management for 150+ airlines. Near-zero churn (a handful of switches in 20 years). 70.9% contribution margin.<br><br>
+ <strong>The franchise:</strong> Altea PSS. Runs reservations, ticketing, departure control, revenue management for 200+ airlines. Very low voluntary churn (<10 competitive switches in 20 years out of 200+ airlines, mostly 2013-2015). 70.9% contribution margin.<br><br>
  <strong>The conglomerate wrapper:</strong> Amadeus also operates GDS distribution (48% of revenue, lower margin, NDC-exposed) and Hospitality & Other (16% of revenue, competitive). Travel analysts apply a single blended multiple to the whole group.<br><br>
  <strong>The catalyst:</strong> No structural separation has occurred yet. The SOTP gap is quantifiable but unrealised. An engagement pointing out that Air IT alone could be worth more than total EV would be the first active voice on a fully passive register.<br><br>
- <strong>Market cap:</strong> €20.9bn. The gap between where comparable mission-critical software trades (26-41x) and the blended group multiple (9.5x) is the mispricing.
+ <strong>Market cap:</strong> €20.9bn. The gap between where comparable mission-critical software trades (22-36x) and the blended group multiple (9.5x, IFRS basis) is the mispricing.
  </div>
  </div>
 </div>
@@ -990,9 +1001,9 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <tbody>
 <tr>
  <td>Free Cash Flow</td>
- <td>£4.2m (FY2024 group UFCF, per Project Atlas workpapers)</td>
+ <td>£4.2m (FY2024 group UFCF, derived from FIH annual report)</td>
  <td>€1,302m (FY2025)</td>
- <td>Amadeus converts approximately 94% of pre-tax operating profit to cash (FY2025 earnings call).</td>
+ <td>Strong cash conversion — €1,302m FCF on €1,811m EBIT.</td>
 </tr>
 <tr>
  <td>FCF Yield at Market</td>
@@ -1003,19 +1014,19 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <tr>
  <td>Dividend Policy</td>
  <td>No dividend since COVID suspension. Cash retained on balance sheet.</td>
- <td>40-50% payout ratio. Reinstated 2023. FY2024 dividend: €1.39/share (€626m total).</td>
+ <td>40-50% payout ratio. Reinstated 2023. FY2024 dividend: €1.39/share (€615m paid in FY2025).</td>
  <td>Amadeus has a formalised, predictable return policy. FIH retains cash but has no stated allocation framework.</td>
 </tr>
 <tr>
  <td>Buybacks</td>
  <td>None.</td>
- <td>€1.3bn buyback completed in 2025. New €500m program announced for 2026.</td>
- <td>Amadeus is actively shrinking the share count. €2bn total returned to shareholders in FY2025 (dividends + buybacks).</td>
+ <td>€1.3bn buyback program completed in 2025. Management has signalled continued shareholder returns.</td>
+ <td>Amadeus is actively shrinking the share count. ~€1.95bn total returned to shareholders in FY2025 (dividends + buybacks).</td>
 </tr>
 <tr>
  <td>Capital Allocation</td>
  <td>Historically poor. Cash flows from FIC (sole provider) cross-subsidised loss-making FBS Construction and Momart Exhibitions.</td>
- <td>Mixed. PSS cash flows fund R&D (€1.4bn, 22% of revenue), Hospitality expansion, and cloud migration. Quality of reinvestment is debatable for adjacent segments.</td>
+ <td>Mixed. PSS cash flows fund R&D (>€1.1bn expensed per CIQ; additional capitalised development costs), Hospitality expansion, and cloud migration. Quality of reinvestment is debatable for adjacent segments.</td>
  <td>Both: core franchise cash flows subsidise weaker businesses.</td>
 </tr>
 <tr>
@@ -1027,7 +1038,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <tr>
  <td>Engagement History</td>
  <td>No activist or engaged shareholder on record. Zucker family (28.7%) is passive controller.</td>
- <td>No activist or engaged shareholder on record. BlackRock (5.7%) largest holder. 98% free float. Nobody has questioned the structure.</td>
+ <td>No activist or engaged shareholder on record. BlackRock (5.5%) largest holder. 98% free float. Nobody has questioned the structure.</td>
  <td>Both have passive registers. The opportunity at both is that the first engaged voice could catalyse a re-rating by making the discount visible.</td>
 </tr>
 </tbody>
@@ -1055,7 +1066,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <div class="metric-cell">
  <div class="mc-val" style="color:var(--text-bright)">€23.2bn</div>
  <div class="mc-label">Enterprise Value</div>
- <div style="font-size:10px; color:var(--text-dim); margin-top:4px;">Net debt: €2.2bn · Minorities: ~€0.2bn</div>
+ <div style="font-size:10px; color:var(--text-dim); margin-top:4px;">Net debt: €2.2bn</div>
  </div>
  <div class="metric-cell">
  <div class="mc-val" style="color:var(--fortress)"><span class="src">€1,811m<span class="tip"><strong>Source:</strong> Amadeus FY2025 Results. Group EBIT for full year 2025. S&P Capital IQ cross-reference.</span></span></div>
@@ -1077,7 +1088,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  <div class="metric-cell">
  <div class="mc-val" style="color:var(--fortress)">€1,563m</div>
  <div class="mc-label">Air IT Contribution</div>
- <div style="font-size:10px; color:var(--text-dim); margin-top:4px;">70.9% margin · Fair multiple: 18–25× (disc. from 26-41x comps)</div>
+ <div style="font-size:10px; color:var(--text-dim); margin-top:4px;">70.9% margin · Fair multiple: 18–25× (disc. from 22-36x comps)</div>
  </div>
 </div>
 </div>
@@ -1087,23 +1098,23 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <h2>Thesis Summary</h2>
 
 <div class="card" style="border:1px solid var(--gold-dim); padding:24px 28px; background:var(--surface2); line-height:1.9; font-size:13px;">
- <p>Amadeus is three businesses under one listing, priced at 9.5× blended EV/EBITDA.</p>
+ <p>Amadeus is three businesses under one listing, priced at 9.5x blended EV/EBITDA (IFRS EBITDA of €2,448m per S&P Capital IQ).</p>
 
- <p style="margin-top:14px;">"Air IT contains the PSS franchise. The Altéa Passenger Service System runs reservations, ticketing, departure control, and revenue management for over 150 airlines. PSS switches are rare - a handful in 20 years (mostly Sabre wins in 2013-2015, since reversed). Switching takes 18-36 months of dual running and risks operational failure. PSS fees are less than 2% of airline revenue. The cost of failure is existential. No CEO will take that trade. This is infrastructure lock-in - the same dynamics that keep banks on legacy systems for decades.</p>
+ <p style="margin-top:14px;">Air IT contains the PSS franchise. The Altéa Passenger Service System runs reservations, ticketing, departure control, and revenue management for over 200 airlines. PSS switches are rare - a handful in 20 years (mostly Sabre wins in 2013-2015, since reversed). Switching takes 18-36 months of dual running and risks operational failure. PSS fees are estimated at less than 1% of airline revenue for most carriers (derived: €1.02 per passenger boarded, per Amadeus FY2024 filing). The cost of failure is existential. No CEO will take that trade. This is infrastructure lock-in - the same dynamics that keep banks on legacy systems for decades.</p>
 
- <p style="margin-top:14px;">"The Air IT Solutions segment - which contains Altea PSS, Navitaire, Airport IT and Expert Services - generates €1,563m of contribution at a 70.9% margin. That is 47% of total segment contribution on 36% of revenue. Comparable mission-critical software trades at 26-41x on contribution. Even at 18–25× (discounted for cyclicality and non-PSS sub-segments), Air IT alone is worth €28–39 billion. Total enterprise value today is €23.2bn.</p>
+ <p style="margin-top:14px;">The Air IT Solutions segment - which contains Altea PSS, Navitaire, Airport IT and Expert Services - generates €1,563m of contribution at a 70.9% margin. That is 47% of total segment contribution on 36% of revenue. Comparable mission-critical software trades at 22-36x EV/EBITDA. Even at 18–25× (discounted for cyclicality and non-PSS sub-segments), Air IT alone would be worth an estimated €28-39 billion. Total enterprise value today is €23.2bn.</p>
 
- <p style="margin-top:14px;">"The second business - Hospitality and Payments - is durable. €342m contribution (34.5% margin), growing 12%, worth €4-6bn.</p>
+ <p style="margin-top:14px;">The second business - Hospitality and Payments - is durable. €342m contribution (34.5% margin), growing 12%, worth €4-6bn.</p>
 
- <p style="margin-top:14px;">"The second largest segment - Air Distribution - is the one the market fears. €1,392m contribution at a 47.3% margin, but facing structural disruption from NDC and direct airline distribution. The fear is valid. But even pricing distribution conservatively at 8–12× contribution, it adds €11–17 billion. The market's error isn't overvaluing distribution - it's undervaluing Air IT by applying the same blended multiple to everything.</p>
+ <p style="margin-top:14px;">The second largest segment - Air Distribution - is the one the market fears. €1,392m contribution at a 47.3% margin, but facing structural disruption from NDC and direct airline distribution. The fear is valid. But even pricing distribution conservatively at 8–12× contribution, it adds €11–17 billion. The market's error isn't overvaluing distribution - it's undervaluing Air IT by applying the same blended multiple to everything.</p>
 
- <p style="margin-top:14px;">"Midpoint SOTP: €97 per share versus €48.6 today. <strong style="color:var(--ams-green)">~100% upside.</strong> Low case: €77 (+59%). High case: €116 (+139%). At €48.6, this is no longer a 'fair price for a great franchise' - the stock has moved into genuine deep-value territory.</p>
+ <p style="margin-top:14px;">Midpoint SOTP: €97 per share versus €48.6 today. <strong style="color:var(--ams-green)">~100% upside.</strong> Low case: €77 (+59%). High case: €116 (+139%). At €48.6, this is no longer a 'fair price for a great franchise' - the stock has moved into genuine deep-value territory.</p>
 
- <p style="margin-top:14px;">"The weakness I need to own: the revenue is cyclical. COVID took revenue down 61% and ROE to –16.7%. The franchise held - no airline left PSS during COVID - but the cash flows didn't. Amadeus has a dominant franchise with cyclical revenue. The mitigation: COVID permanently impaired Sabre ($3.7bn net debt, negative FCF, -92% TSR), eliminating the only credible alternative. The competitive position is stronger post-crisis than before it.</p>
+ <p style="margin-top:14px;">The weakness I need to own: the revenue is cyclical. COVID took revenue down 61% and the company posted a significant net loss. The franchise held - no airline left PSS during COVID - but the cash flows didn't. Amadeus has a dominant franchise with cyclical revenue. The mitigation: COVID permanently impaired Sabre ($3.7bn net debt, negative FCF, -92% price return), eliminating the only credible alternative. The competitive position is stronger post-crisis than before it.</p>
 
- <p style="margin-top:14px;">"Catalyst: three paths. Software analyst re-coverage - one Tier 1 initiation changes the conversation. Capital return policy - fortress cash flows funding buybacks instead of subsidising hospitality. Or shareholder engagement - even at 0.5–1%, could be the first active voice on a register that's entirely passive. The SOTP letter is the catalyst.</p>
+ <p style="margin-top:14px;">Catalyst: three paths. Software analyst re-coverage - one Tier 1 initiation changes the conversation. Capital return policy - fortress cash flows funding buybacks instead of subsidising hospitality. Or shareholder engagement - even at 0.5–1%, could be the first active voice on a register that's entirely passive. The SOTP letter is the catalyst.</p>
 
- <p style="margin-top:14px;">"Without catalyst: 9–12% CAGR from organic compounding - fortress volume growth plus pricing power. With partial re-rating: 14–20%. At €48.6, even the bear case - no re-rating, slow growth - delivers mid-single-digit returns. The margin of safety at this price is real, and it wasn't there at €68."</p>
+ <p style="margin-top:14px;">Without catalyst: 9–12% CAGR from organic compounding - fortress volume growth plus pricing power. With partial re-rating: 14–20%. At €48.6, even the bear case - no re-rating, slow growth - delivers mid-single-digit returns. The margin of safety at this price is real, and it wasn't there at €68.</p>
 </div>
 </div>
 
@@ -1124,11 +1135,11 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 </tr>
 <tr>
  <td><strong>"COVID proved the revenue is cyclical. How durable is the franchise?"</strong></td>
- <td>Revenue fell 61% during COVID. No airline left PSS during the crisis. Sabre came out with $3.7bn net debt, -92% TSR. Competitive landscape is better now than 2019.</td>
+ <td>Revenue fell 61% during COVID. No airline left PSS during the crisis. Sabre came out with $3.7bn net debt, -92% price return. Competitive landscape is better now than 2019.</td>
 </tr>
 <tr>
  <td><strong>"What about NDC and AI? Aren't they disintermediating the GDS?"</strong></td>
- <td>Yes - but that's Tier 3, not Tier 1. NDC disrupts the distribution layer (how bookings reach airlines). PSS is the processing layer (how bookings are executed). AI agents and NDC pipes still need PSS to check in passengers, issue tickets, manage inventory, and settle interline transactions. My SOTP already prices Distribution at 11–16× EBIT - the fear is in the multiple. The fortress is upstream, unaffected, and arguably benefits from NDC complexity (more integration middleware, more PSS value).</td>
+ <td>Yes - but that's Tier 3, not Tier 1. NDC disrupts the distribution layer (how bookings reach airlines). PSS is the processing layer (how bookings are executed). AI agents and NDC pipes still need PSS to check in passengers, issue tickets, manage inventory, and settle interline transactions. My SOTP already prices Distribution at 8-12x contribution - the fear is in the multiple. The fortress is upstream, unaffected, and arguably benefits from NDC complexity (more integration middleware, more PSS value).</td>
 </tr>
 <tr>
  <td><strong>"Why at €48.6? Why now?"</strong></td>
@@ -1140,7 +1151,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 </tr>
 <tr>
  <td><strong>"Why did Sabre and Travelport not make the cut?"</strong></td>
- <td>Sabre: approximately 79% distribution, 21% airline IT (shrinking, per PitchBook). Sold hotel IT to TPG for $1.1bn ($960m net proceeds) to service debt. $3.7bn net debt, $536m EBITDA, interest ($448m) exceeds operating income. Travelport: pure GDS distribution, no PSS, private, $3.95bn debt (Companies House). EBITDA not publicly disclosed.</td>
+ <td>Sabre: predominantly a distribution business with a smaller and shrinking airline IT segment. Sold hotel IT to TPG for $1.1bn ($960m net proceeds) to service debt. $3.7bn net debt, $536m EBITDA (Sabre-adjusted basis), interest expense approaches or exceeds operating income. Travelport: pure GDS distribution, no PSS, private, heavily leveraged. EBITDA not publicly disclosed.</td>
 </tr>
 </tbody>
 </table>
@@ -1212,8 +1223,8 @@ function initChart() {
  data: {
  labels,
  datasets: [
- { label: 'Amadeus TSR', data: amadeus, borderColor: '#34d399', borderWidth: 2.5, pointRadius: 0, tension: 0.15, fill: false },
- { label: 'Sabre TSR', data: sabre, borderColor: '#f87171', borderWidth: 2.5, pointRadius: 0, tension: 0.15, fill: false },
+ { label: 'Amadeus Price Return', data: amadeus, borderColor: '#34d399', borderWidth: 2.5, pointRadius: 0, tension: 0.15, fill: false },
+ { label: 'Sabre Price Return', data: sabre, borderColor: '#f87171', borderWidth: 2.5, pointRadius: 0, tension: 0.15, fill: false },
  { label: 'Air Passengers', data: airPax, borderColor: '#60a5fa', borderWidth: 1.5, borderDash: [6,3], pointRadius: 0, fill: false, tension: 0 },
  { label: 'Tourist Arrivals', data: tourism, borderColor: '#fbbf24', borderWidth: 1.5, borderDash: [6,3], pointRadius: 0, fill: false, tension: 0 }
  ]

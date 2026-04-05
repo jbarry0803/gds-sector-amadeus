@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@300;400;500;600&family=Fredoka+One&family=Oswald:wght@400;500;600;700&display=swap');
 
 /* GATE */
-#pw-gate{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#c6dfc0;font-family:Oswald,sans-serif;overflow:hidden}
+#pw-gate{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#c6dfc0;font-family:Oswald,sans-serif;overflow:hidden;padding:16px}
 #pw-gate::before{content:'';position:absolute;inset:-80%;z-index:0;
  background:
  repeating-linear-gradient(0deg,transparent,transparent 76px,rgba(0,80,0,.06) 76px,rgba(0,80,0,.06) 78px),
@@ -271,53 +271,202 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 .tier-durable { border-left: 3px solid var(--durable); }
 .tier-exposed { border-left: 3px solid var(--exposed); }
 
-/* RESPONSIVE */
-/* MOBILE & TABLET */
+/* ═══════════════════════════════════════════════════════════ */
+/* RESPONSIVE - FULLY REWORKED FOR MOBILE + DESKTOP          */
+/* ═══════════════════════════════════════════════════════════ */
+
+/* LARGE TABLET */
 @media (max-width: 1100px) {
- .grid-2.grid-3.grid-4.grid-5 { grid-template-columns: 1fr; }
+ .grid-4, .grid-5 { grid-template-columns: repeat(2, 1fr); }
+ .grid-3 { grid-template-columns: repeat(2, 1fr); }
+ .metric-strip.grid-5 { grid-template-columns: repeat(3, 1fr); }
  .tab-btn { padding: 10px 12px; font-size: 9px; }
 }
+
+/* TABLET */
 @media (max-width: 768px) {
  .container { padding: 0 16px; }
- .section { padding: 20px 0; }
- .section h2 { font-size: 17px; }
- .section .sub { font-size: 11px; }
- .masthead-inner { padding: 24px 16px 18px; }
- .masthead h1 { font-size: 18px; }
+ .section { padding: 22px 0; }
+ .section h2 { font-size: 18px; }
+ .section .sub { font-size: 11.5px; }
+ .masthead-inner { padding: 20px 16px 16px; }
+ .masthead h1 { font-size: 20px; }
  .masthead .subtitle { font-size: 11px; }
  .masthead .meta-row { flex-wrap: wrap; gap: 10px; font-size: 9px; }
- .tab-nav-inner { padding: 0 8px; }
- .tab-btn { padding: 8px 8px; font-size: 7.5px; letter-spacing: 0.04em; }
- .card { padding: 12px; }
- .card-val { font-size: 18px; }
- .card-body { font-size: 10px; }
- .card-label { font-size: 8px; }
- table.ct { font-size: 11px; }
- table.ct thead th { font-size: 8px; padding: 8px 8px; }
- table.ct tbody td { padding: 8px 8px; font-size: 11px; }
- .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
- table.ct { min-width: 500px; }
- .metric-cell { padding: 10px; }
- .mc-val { font-size: 18px; }
- .synth { padding: 14px 16px; }
- .synth h3 { font-size: 14px; }
- .grid-2.grid-3.grid-4.grid-5 { gap: 10px; }
+
+ /* TAB NAV - horizontal scroll with fade hints */
+ .tab-nav { position: sticky; top: 0; z-index: 500; }
+ .tab-nav::after {
+   content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 32px;
+   background: linear-gradient(90deg, transparent, var(--surface)); pointer-events: none; z-index: 1;
+ }
+ .tab-nav-inner { padding: 0 8px; gap: 0; }
+ .tab-btn { padding: 10px 10px; font-size: 8.5px; letter-spacing: 0.04em; }
+
+ /* GRIDS - 2-col on tablet, 1-col where needed */
+ .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; gap: 10px; }
+ .grid-2 { grid-template-columns: repeat(2, 1fr); }
+ .metric-strip.grid-5 { grid-template-columns: repeat(3, 1fr); }
+ .metric-strip.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+ /* CARDS */
+ .card { padding: 14px; }
+ .card-val { font-size: 20px; }
+ .card-body { font-size: 11px; line-height: 1.65; }
+ .card-label { font-size: 8.5px; }
+
+ /* TABLES - responsive horizontal scroll */
+ .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; }
+ .table-wrap::after {
+   content: 'Scroll →'; display: block; text-align: right;
+   font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: var(--text-faint);
+   padding: 4px 10px; letter-spacing: 0.1em; text-transform: uppercase;
+ }
+ table.ct { min-width: 580px; font-size: 11.5px; }
+ table.ct thead th { font-size: 8.5px; padding: 9px 10px; }
+ table.ct tbody td { padding: 9px 10px; font-size: 11.5px; }
+
+ /* METRICS */
+ .metric-cell { padding: 12px 10px; }
+ .mc-val { font-size: 19px; }
+ .mc-label { font-size: 8px; }
+
+ /* SYNTHESIS */
+ .synth { padding: 16px 18px; }
+ .synth h3 { font-size: 15px; }
+ .synth p { font-size: 12px; }
+
  .cell-val { font-size: 11px; }
- .section-label { font-size: 8px; letter-spacing: 0.2em; }
- .bar-label { font-size: 7px; }
+ .section-label { font-size: 8.5px; letter-spacing: 0.2em; }
  .lineage-node { padding: 10px 14px; }
- .src .tip { width: 220px; font-size: 9px; }
+
+ /* TOOLTIPS - touch friendly */
+ .src .tip { width: 240px; font-size: 9.5px; }
+
+ /* CHART */
+ .chart-area { height: 320px; }
 }
-@media (max-width: 480px) {
- .tab-btn { padding: 7px 6px; font-size: 7px; letter-spacing: 0.02em; }
+
+/* PHONE */
+@media (max-width: 540px) {
+ .container { padding: 0 12px; }
+ .section { padding: 18px 0; }
+
+ /* MASTHEAD */
+ .masthead-inner { padding: 16px 12px 14px; }
+ .masthead h1 { font-size: 17px; line-height: 1.3; }
+ .classification { font-size: 8px; letter-spacing: 0.2em; margin-bottom: 4px; }
+ .masthead .meta-row { font-size: 8.5px; gap: 8px; margin-top: 10px; padding-top: 10px; }
+
+ /* TABS - pill-style mobile nav */
+ .tab-nav-inner { padding: 6px 8px; gap: 4px; }
+ .tab-btn {
+   padding: 8px 10px; font-size: 8px; letter-spacing: 0.03em;
+   border-radius: 6px; border-bottom: none !important;
+   white-space: nowrap;
+ }
+ .tab-btn.active {
+   background: rgba(201,168,76,0.12); color: var(--gold);
+   border-bottom: none !important;
+ }
+
+ /* ALL GRIDS STACK */
+ .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr !important; gap: 8px; }
+ .metric-strip.grid-5, .metric-strip.grid-3 { grid-template-columns: repeat(2, 1fr) !important; }
+
+ /* SECTION TYPOGRAPHY */
+ .section h2 { font-size: 16px; line-height: 1.35; }
+ .section .sub { font-size: 11px; margin-bottom: 14px; }
+ .section-label { font-size: 8px; letter-spacing: 0.18em; }
+
+ /* CARDS */
+ .card { padding: 12px; border-radius: 6px; }
+ .card-val { font-size: 18px; }
+ .card-body { font-size: 10.5px; line-height: 1.6; }
+ .card-label { font-size: 8px; }
+
+ /* TABLES */
+ table.ct { min-width: 480px; }
+ table.ct thead th { font-size: 7.5px; padding: 7px 8px; }
+ table.ct tbody td { padding: 7px 8px; font-size: 10.5px; }
+ .cell-val { font-size: 10.5px; }
+
+ /* METRICS */
+ .metric-cell { padding: 10px 8px; }
+ .mc-val { font-size: 17px; }
+ .mc-label { font-size: 7.5px; }
+ .metric-cell div[style*="font-size:10px"] { font-size: 9px !important; }
+
+ /* SYNTHESIS */
+ .synth { padding: 14px; border-radius: 6px; }
+ .synth h3 { font-size: 14px; margin-bottom: 8px; }
+ .synth p { font-size: 11.5px; line-height: 1.65; }
+
+ /* CHART */
+ .chart-wrap { padding: 12px; }
+ .chart-area { height: 260px; }
+ .chart-wrap div[style*="display:flex"] { flex-wrap: wrap; gap: 8px !important; font-size: 9.5px !important; }
+
+ /* TOOLTIPS - bottom positioned on mobile to prevent off-screen */
+ .src .tip {
+   width: 200px; font-size: 9px; padding: 6px 8px;
+   bottom: auto; top: 100%; left: 0; transform: none;
+ }
+
+ /* BAR */
+ .bar-h { height: 20px; }
+ .bar-seg { font-size: 7px; }
+
+ /* LINEAGE */
+ .lineage-node { padding: 10px 12px; flex-direction: column; align-items: flex-start; gap: 6px; }
+ .lineage-name { font-size: 12px; }
+ .lineage-detail { font-size: 10px; }
+
+ /* FOOTNOTES */
+ .footnotes { font-size: 9px; padding: 14px 0 24px; }
+}
+
+/* VERY SMALL PHONE (iPhone SE, etc.) */
+@media (max-width: 380px) {
+ .container { padding: 0 8px; }
  .masthead h1 { font-size: 15px; }
- .section h2 { font-size: 15px; }
+ .section h2 { font-size: 14.5px; }
  .card-val { font-size: 16px; }
- table.ct { min-width: 420px; }
- table.ct tbody td { font-size: 10px; padding: 6px 6px; }
- table.ct thead th { font-size: 7px; padding: 6px 6px; }
- .container { padding: 0 10px; }
- .metric-strip.grid-3 { grid-template-columns: 1fr 1fr; }
+ .mc-val { font-size: 15px; }
+ .tab-btn { font-size: 7px; padding: 7px 8px; }
+ table.ct { min-width: 400px; }
+ .metric-strip.grid-5, .metric-strip.grid-3 { grid-template-columns: 1fr 1fr !important; }
+ .synth p { font-size: 11px; }
+}
+
+/* DESKTOP WIDE - max out readability */
+@media (min-width: 1400px) {
+ .container { max-width: 1520px; }
+ body { font-size: 13.5px; }
+}
+
+/* TOUCH-FRIENDLY HOVER STATES */
+@media (hover: none) {
+ .src .tip { display: none !important; }
+ .src { border-bottom-style: solid; }
+ table.ct tbody tr:hover td { background: transparent; }
+}
+
+/* SMOOTH SCROLL HINT ANIMATION FOR TABLES ON MOBILE */
+@keyframes scrollHint { 0%,100%{opacity:.4} 50%{opacity:1} }
+@media (max-width: 768px) {
+ .table-wrap::after { animation: scrollHint 2s ease-in-out 3; }
+}
+
+/* PRINT STYLES */
+@media print {
+ #pw-gate { display: none !important; }
+ #main-content { display: block !important; }
+ .tab-nav { display: none; }
+ .tab-panel { display: block !important; page-break-inside: avoid; }
+ body { background: white; color: #222; }
+ body::before { display: none; }
+ .card, .synth, .table-wrap { border-color: #ddd; }
 }
 </style>
 </head>
@@ -325,7 +474,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 
 <!-- ═══════ MONOPOLY PASSWORD GATE - FULL BOARD EDITION ═══════ -->
 <div id="pw-gate">
-<div style="max-width:420px;width:90%;background:#fff;border-radius:14px;padding:40px 36px;text-align:center;box-shadow:0 20px 60px rgba(0,40,0,0.15);position:relative;z-index:1;animation:cardIn .6s cubic-bezier(.34,1.56,.64,1) both">
+<div style="max-width:420px;width:92%;background:#fff;border-radius:14px;padding:clamp(24px, 5vw, 40px) clamp(20px, 4vw, 36px);text-align:center;box-shadow:0 20px 60px rgba(0,40,0,0.15);position:relative;z-index:1;animation:cardIn .6s cubic-bezier(.34,1.56,.64,1) both">
  <div style="font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#2E7D32;font-weight:700;margin-bottom:6px">GDS Sector Analysis</div>
  <div style="font-family:'Playfair Display',serif;font-size:26px;color:#1a472a;font-weight:700;margin-bottom:4px">Amadeus IT Group</div>
  <div style="font-size:11px;color:#888;margin-bottom:24px">Prepared by Joe Barry - March 2026</div>
@@ -356,13 +505,13 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <!-- ═══════════════ TAB NAVIGATION ═══════════════ -->
 <div class="tab-nav">
 <div class="tab-nav-inner">
- <button class="tab-btn active" onclick="switchTab('exec')">① Executive Summary</button>
- <button class="tab-btn" onclick="switchTab('monopoly')">② Market Structure</button>
- <button class="tab-btn" onclick="switchTab('sotp')">③ SOTP & Discount</button>
- <button class="tab-btn" onclick="switchTab('tsr')">④ Returns & Valuation</button>
- <button class="tab-btn" onclick="switchTab('fih')">⑤ FIH Comparison</button>
- <button class="tab-btn" onclick="switchTab('cram')">⑥ Key Data</button>
- <button class="tab-btn" onclick="switchTab('sources')">⑦ Sources</button>
+ <button class="tab-btn active" onclick="switchTab('exec', this)">① Executive Summary</button>
+ <button class="tab-btn" onclick="switchTab('monopoly', this)">② Market Structure</button>
+ <button class="tab-btn" onclick="switchTab('sotp', this)">③ SOTP & Discount</button>
+ <button class="tab-btn" onclick="switchTab('tsr', this)">④ Returns & Valuation</button>
+ <button class="tab-btn" onclick="switchTab('fih', this)">⑤ FIH Comparison</button>
+ <button class="tab-btn" onclick="switchTab('cram', this)">⑥ Key Data</button>
+ <button class="tab-btn" onclick="switchTab('sources', this)">⑦ Sources</button>
 </div>
 </div>
 
@@ -374,7 +523,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 
 <div class="section">
 <div class="section-label"></div>
-<h2 style="font-size:20px; line-height:1.5; max-width:1100px;">
+<h2 style="font-size:clamp(14px, 2.5vw, 20px); line-height:1.5; max-width:1100px;">
  Amadeus IT's Passenger Service System is a <span style="color:var(--ams-green)">very-low-churn mission-critical software platform</span> processing airline operations for 200+ carriers, buried inside a conglomerate structure that causes the market to apply a <span style="color:var(--gold)">blended travel-sector multiple</span> instead of the <span style="color:var(--fortress)">22-36x range at which comparable enterprise software trades</span> (see § 3.2) - creating a quantifiable SOTP gap that can be closed by re-coverage or shareholder engagement.
 </h2>
 </div>
@@ -1166,11 +1315,13 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <!-- ═══════════════════════════════════════════════════════════ -->
 <script>
 // TAB SWITCHING
-function switchTab(id) {
+function switchTab(id, btn) {
  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
  document.getElementById('tab-' + id).classList.add('active');
- event.target.classList.add('active');
+ if (btn) btn.classList.add('active');
+ // Scroll the active tab button into view on mobile
+ if (btn) btn.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
  window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
@@ -1246,17 +1397,17 @@ function initChart() {
 }
 
 // Override tab switch to init chart
-switchTab = function(id) {
+switchTab = function(id, btn) {
  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
  document.getElementById('tab-' + id).classList.add('active');
- event.target.classList.add('active');
+ if (btn) btn.classList.add('active');
+ if (btn) btn.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
  if (id === 'tsr') setTimeout(initChart, 50);
  window.scrollTo({top: 0, behavior: 'smooth'});
 };
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
 <!-- TAB 9: SOURCES -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <div id="tab-sources" class="tab-panel">
@@ -1287,6 +1438,27 @@ switchTab = function(id) {
 </div>
 
 </div><!-- end #main-content -->
+
+<script>
+// Mobile: tap sourced numbers to show tooltips
+if ('ontouchstart' in window) {
+  document.addEventListener('click', function(e) {
+    var src = e.target.closest('.src');
+    // Close all open tips first
+    document.querySelectorAll('.src.tip-open').forEach(function(el) {
+      if (el !== src) el.classList.remove('tip-open');
+    });
+    if (src) {
+      e.preventDefault();
+      src.classList.toggle('tip-open');
+    }
+  });
+  // Add CSS for tap-to-show
+  var style = document.createElement('style');
+  style.textContent = '.src.tip-open .tip { display: block !important; }';
+  document.head.appendChild(style);
+}
+</script>
 
 </body>
 </html>

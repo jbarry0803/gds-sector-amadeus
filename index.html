@@ -411,9 +411,9 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
  Amadeus's own historical trading range is 10-16× (derived from S&amp;P CIQ financials and public share price data: FY2019 at €70-75 = 14.9-15.8×; current = 9.5×). The current multiple is <strong>below</strong> the entire observable non-COVID history.<br><br>
  <strong>EBITDA growth (CIQ):</strong> FY2024→2025: +7.3%.<br>
  <strong>Dividend yield:</strong> €1.43/share (FY2025 per CIQ) = 2.9% at entry.<br>
- <strong>Buybacks:</strong> 3-year average €770m/year (CIQ: €613m/€362m/€1,336m). Mechanically retires ~3% of shares annually at current prices.<br>
+ <strong>Buybacks:</strong> €613m (2023), €362m (2024), €1,336m (2025) per CIQ. At scale since FY2023 only. FY2025 total returns (€1,951m) exceeded UFCF (€1,386m) by €564m. Share count: 431.0m (2019) → 450.0m (post-COVID raise) → 430.9m (2025).<br>
  <strong>Net debt:</strong> 0.9× EBITDA and declining.<br><br>
- <strong>10-year base case (§ 4.2):</strong> 7% EBITDA growth, 13× exit, €770m/year buybacks → share count declines from 431m to ~320m → <strong>€189/share terminal + €21 dividends = 4.3× total return, ~16% CAGR.</strong> Even the stress case (3% growth, 11× exit) produces ~10.5% CAGR after buyback accretion. The buyback programme mechanically compounds per-share value by 35-46% over the decade — independent of any market re-rating.
+ <strong>10-year return model (§ 4.2):</strong> The base case assumes 5% EBITDA growth, no multiple expansion (exit at 9.5×), and no buybacks — producing <strong>~8% CAGR</strong> from compounding and dividends alone. Adding buybacks (€770m/yr, 3yr CIQ avg): ~11%. Adding partial re-rating to 13×: ~15%. Full re-rating to 16× (top of own history): ~18%. Each layer is separately visible so you can apply your own assumptions.
  </div>
  </div>
 </div>
@@ -930,73 +930,84 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <div class="section">
 <div class="section-label">§ 4.2 - 10-Year Return Analysis</div>
 <h2>10-Year Compounding Model at €48.6 Entry</h2>
-<div class="sub">Each scenario models EBITDA growth, exit multiple, cumulative dividends, and buyback accretion over 10 years. All starting inputs from S&amp;P Capital IQ FY2025. Buyback assumption: €770m/year (3-year average of FY2023-2025 per CIQ: €613m + €362m + €1,336m). Share repurchase price assumed to rise with earnings growth. Net debt held constant at €2,242m (conservative).</div>
+<div class="sub">Four scenarios, layered from most conservative to most optimistic. Each adds one assumption on top of the last, so the incremental impact of each is visible. All starting inputs from S&amp;P Capital IQ FY2025. Net debt held constant at €2,242m. Buyback repurchase price assumed to rise with earnings growth.</div>
 
 <div class="table-wrap">
 <table class="ct">
 <thead><tr>
- <th style="width:140px">Scenario</th>
- <th style="text-align:right;width:75px">EBITDA Growth</th>
- <th style="text-align:right;width:90px">Terminal EBITDA</th>
+ <th style="width:220px">Scenario</th>
+ <th style="text-align:right;width:70px">EBITDA Growth</th>
  <th style="text-align:right;width:65px">Exit ×</th>
- <th style="text-align:right;width:90px">Shares (yr 10)</th>
- <th style="text-align:right;width:90px">Terminal Price</th>
- <th style="text-align:right;width:80px">+ Dividends</th>
- <th style="text-align:right;width:70px">Total Return</th>
- <th style="text-align:right;width:70px">10yr CAGR</th>
+ <th style="text-align:right;width:75px">Buybacks</th>
+ <th style="text-align:right;width:90px">Terminal EBITDA</th>
+ <th style="text-align:right;width:75px">Shares (yr 10)</th>
+ <th style="text-align:right;width:75px">Terminal Price</th>
+ <th style="text-align:right;width:65px">Total Return</th>
+ <th style="text-align:right;width:65px">10yr CAGR</th>
 </tr></thead>
 <tbody>
-<tr style="background:rgba(212,68,68,0.04)">
- <td><span class="badge badge-red">STRESS</span></td>
- <td style="text-align:right" class="cell-val">3%</td>
- <td style="text-align:right" class="cell-val">€3,289m</td>
- <td style="text-align:right" class="cell-val">11×</td>
- <td style="text-align:right" class="cell-val">~296m</td>
- <td style="text-align:right" class="cell-val">€115</td>
- <td style="text-align:right" class="cell-val">~€17</td>
- <td style="text-align:right" class="cell-val">2.7×</td>
- <td style="text-align:right; color:var(--gold)" class="cell-val">~10.5%</td>
-</tr>
 <tr style="background:rgba(201,168,76,0.04)">
- <td><span class="badge badge-amber">BASE</span></td>
- <td style="text-align:right" class="cell-val">7%</td>
- <td style="text-align:right" class="cell-val">€4,815m</td>
+ <td><span class="badge badge-amber">BASE</span><br><span style="font-size:9px;color:var(--text-dim)">Growth only. No re-rating. No buybacks.</span></td>
+ <td style="text-align:right" class="cell-val">5%</td>
+ <td style="text-align:right" class="cell-val">9.5×</td>
+ <td style="text-align:right" class="cell-val">None</td>
+ <td style="text-align:right" class="cell-val">€3,988m</td>
+ <td style="text-align:right" class="cell-val">431m</td>
+ <td style="text-align:right" class="cell-val">€83</td>
+ <td style="text-align:right" class="cell-val">2.1×</td>
+ <td style="text-align:right; color:var(--gold)" class="cell-val">~8%</td>
+</tr>
+<tr style="background:rgba(46,168,138,0.04)">
+ <td><span class="badge badge-green">+ BUYBACKS</span><br><span style="font-size:9px;color:var(--text-dim)">Add €770m/yr buybacks (3yr CIQ avg).</span></td>
+ <td style="text-align:right" class="cell-val">5%</td>
+ <td style="text-align:right" class="cell-val">9.5×</td>
+ <td style="text-align:right" class="cell-val">€770m/yr</td>
+ <td style="text-align:right" class="cell-val">€3,988m</td>
+ <td style="text-align:right" class="cell-val">~309m</td>
+ <td style="text-align:right" class="cell-val">€116</td>
+ <td style="text-align:right" class="cell-val">2.8×</td>
+ <td style="text-align:right; color:var(--ams-green)" class="cell-val">~11%</td>
+</tr>
+<tr style="background:rgba(74,144,217,0.04)">
+ <td><span class="badge badge-blue">+ PARTIAL RE-RATING</span><br><span style="font-size:9px;color:var(--text-dim)">Exit at 13× (below pre-COVID 15-16×).</span></td>
+ <td style="text-align:right" class="cell-val">6%</td>
  <td style="text-align:right" class="cell-val">13×</td>
- <td style="text-align:right" class="cell-val">~320m</td>
- <td style="text-align:right" class="cell-val">€189</td>
- <td style="text-align:right" class="cell-val">~€21</td>
- <td style="text-align:right" class="cell-val">4.3×</td>
- <td style="text-align:right; color:var(--ams-green)" class="cell-val">~16%</td>
+ <td style="text-align:right" class="cell-val">€770m/yr</td>
+ <td style="text-align:right" class="cell-val">€4,384m</td>
+ <td style="text-align:right" class="cell-val">~314m</td>
+ <td style="text-align:right" class="cell-val">€174</td>
+ <td style="text-align:right" class="cell-val">4.0×</td>
+ <td style="text-align:right; color:var(--ams-green)" class="cell-val">~15%</td>
 </tr>
 <tr style="background:rgba(76,175,80,0.04)">
- <td><span class="badge badge-green">BULL (SOTP closes)</span></td>
+ <td><span class="badge badge-green">FULL RE-RATING (SOTP)</span><br><span style="font-size:9px;color:var(--text-dim)">Exit at 16× (top of own history). Requires catalyst.</span></td>
  <td style="text-align:right" class="cell-val">7%</td>
+ <td style="text-align:right" class="cell-val">16×</td>
+ <td style="text-align:right" class="cell-val">€770m/yr</td>
  <td style="text-align:right" class="cell-val">€4,815m</td>
- <td style="text-align:right" class="cell-val">19×</td>
  <td style="text-align:right" class="cell-val">~320m</td>
- <td style="text-align:right" class="cell-val">€279</td>
- <td style="text-align:right" class="cell-val">~€21</td>
- <td style="text-align:right" class="cell-val">6.2×</td>
- <td style="text-align:right; color:var(--ams-green)" class="cell-val">~20%</td>
+ <td style="text-align:right" class="cell-val">€234</td>
+ <td style="text-align:right" class="cell-val">5.3×</td>
+ <td style="text-align:right; color:var(--ams-green)" class="cell-val">~18%</td>
 </tr>
 </tbody>
 </table>
 </div>
 
-<p style="margin-top:10px; font-size:10px; color:var(--text-faint);">For comparison without buyback accretion (static 430.9m shares): Stress 2.0×/7% · Base 3.3×/13% · Bull 4.7×/17%. Buybacks add ~3-3.5pp of annual return across all scenarios. This is mechanical — fewer shares means higher per-share value on the same enterprise value.</p>
-
 <div class="synth">
-<h3>What Drives the Return</h3>
+<h3>What Each Layer Adds</h3>
 
-<p><strong>Stress (3% EBITDA growth, 11× exit, ~10.5% CAGR):</strong> GDP-like growth after a demand shock. Trough exit multiple. Even in this scenario, the combination of modest EBITDA compounding (€2,448m → €3,289m), shrinking share count (~296m vs 431m today), and cumulative dividends (~€17/share) produces a 2.7× total return. The entry price of 9.5× on a business earning 17-20% ROIC does the work.</p>
+<p><strong>Base (~8% CAGR):</strong> 5% EBITDA growth, no multiple expansion, no buybacks. 5% is between the through-cycle revenue CAGR of 2.7% (2019→2025 per CIQ, includes COVID) and the most recent normalised year of 6.1% (FY2024→2025 revenue growth per CIQ). Exit at 9.5× — the same multiple you buy at. Dividends of €1.43/share (CIQ) growing at 5%. 2.1× total return from earnings compounding and dividends alone. Nothing else needs to happen.</p>
 
-<p><strong>Base (7% EBITDA growth, 13× exit, ~16% CAGR):</strong> 7% matches the FY2024→2025 actual (CIQ: €2,282m → €2,448m, +7.3%). Exit at 13× — partial reversion toward pre-COVID 15-16×. EBITDA grows to €4,815m. Share count declines to ~320m. Terminal price €189/share plus ~€21 dividends = 4.3× total return. Roughly half the return comes from EBITDA growth, a quarter from buyback accretion, and a quarter from modest multiple expansion. No catalyst required — just the business doing what it did last year, management continuing to return capital, and the multiple drifting partway back toward its own history.</p>
+<p><strong>+ Buybacks (~11% CAGR):</strong> Adding €770m/year (3-year CIQ average: €613m/€362m/€1,336m) reduces the share count from 431m to ~309m. Buyback programme at scale since FY2023 only. FY2025 total capital returned (€1,951m) exceeded UFCF (€1,386m) by €564m. The €770m assumption approximates UFCF minus dividends (€1,386m − €615m = €771m per CIQ). Impact: +3pp CAGR.</p>
 
-<p><strong>Bull / SOTP closes (7% EBITDA growth, 19× exit, ~20% CAGR):</strong> Same earnings growth. Exit at 19× — midpoint of the comp-based SOTP range, reflecting PSS being valued closer to mission-critical software and Distribution/Hospitality at travel-tech multiples. 19× is still a steep discount to the software comps (22-36×) but above the historical blended range (10-16×), reflecting the market recognising that PSS alone warrants a premium. Terminal price €279/share. 6.2× total return. This requires a catalyst — analyst re-coverage, improved segment disclosure, or shareholder engagement — but the base case already delivers ~16% without it.</p>
+<p><strong>+ Partial re-rating (~15% CAGR):</strong> Exit at 13× instead of 9.5×. The group traded at 15-16× pre-COVID (verified: at €70-75 on FY2019 EBITDA per CIQ). 13× is still below that level. Growth lifted to 6%. Impact: +4pp CAGR.</p>
 
-<p style="margin-top:12px;"><strong>The buyback engine.</strong> Amadeus returned €1,951m to shareholders in FY2025 (€1,336m buybacks + €615m dividends per S&amp;P CIQ). The 3-year average buyback spend is €770m/year. At current prices, that retires ~3% of the share count annually. Over a decade, this mechanically compounds per-share value by 35-46% — independent of any market re-rating. This is not modelled optimistically: the buyback assumption uses the 3-year average (which includes the low FY2024 figure of €362m), and the assumed repurchase price rises with earnings growth rather than staying at today's depressed level.</p>
+<p><strong>Full re-rating / SOTP closes (~18% CAGR):</strong> Exit at 16× — top of the group's own historical range. Growth at 7% (FY2024→2025 actual per CIQ). Requires a catalyst. Impact: +3pp CAGR.</p>
 
-<p style="font-size:10px; color:var(--text-faint); margin-top:10px;">Inputs: FY2025 EBITDA €2,448m, net debt €2,242m, shares 430.9m, dividends €615m (€1.43/share), buybacks €770m/year (3yr CIQ average). All from S&amp;P Capital IQ. Dividends grow in line with EBITDA. Buyback price rises with earnings growth. Net debt held constant. Cloud migration tailwind (indirect cost moderation) not modelled — directionally positive but unquantified.</p>
+<p style="margin-top:12px;"><strong>Capital returns data (S&amp;P Capital IQ).</strong> Buyback history: €10m (2019), €23m (2020), €38m (2021), €4m (2022), €613m (2023), €362m (2024), €1,336m (2025). Share count: 431.0m (2019) → 450.0m (2022, post-COVID equity raise of €750m / +19.3m shares) → 430.9m (2025).</p>
+
+<p style="font-size:10px; color:var(--text-faint); margin-top:10px;">All starting inputs from S&amp;P Capital IQ FY2025: EBITDA €2,448m, net debt €2,242m, shares 430.9m, dividends €615m (€1.43/share). Dividends grow in line with EBITDA growth. Buyback repurchase price rises with EBITDA growth. Net debt held constant.</p>
 </div>
 </div>
 
@@ -1067,7 +1078,7 @@ table.ct td:first-child { font-weight: 600; color: var(--text-bright); font-size
 <h2>Thesis Summary</h2>
 
 <div class="card" style="border:1px solid var(--gold-dim); padding:24px 28px; background:var(--surface2); line-height:1.9; font-size:13px;">
- <p><strong>The compounding case.</strong> Amadeus generates €2,448m EBITDA (FY2025 per S&amp;P CIQ), earns 17-20% ROIC through the cycle, and trades at 9.5× EV/EBITDA — below its own historical range of 10-16×. EBITDA growth: +7.3% FY2024→2025 (CIQ). Dividend yield: 2.9% at entry. Buybacks: 3-year average €770m/year (CIQ), mechanically retiring ~3% of shares annually. Net debt: 0.9× EBITDA. Base case over 10 years: 7% EBITDA growth, 13× exit, buybacks reduce share count from 431m to ~320m → <strong>4.3× total return, ~16% CAGR.</strong> Even the stress case (3% growth, 11× exit) produces ~10.5% CAGR after buyback accretion.</p>
+ <p><strong>The compounding case.</strong> Amadeus generates €2,448m EBITDA (FY2025 per S&amp;P CIQ), earns 17-20% ROIC through the cycle, and trades at 9.5× EV/EBITDA — below its own historical range of 10-16×. EBITDA growth: +7.3% FY2024→2025 (CIQ). Dividend yield: 2.9% at entry. Buybacks: €613m/€362m/€1,336m in FY2023-25 (CIQ). At scale since FY2023 only. FY2025 total returns exceeded UFCF by €564m. Net debt: 0.9× EBITDA. 10-year return model (§ 4.2): base case assumes 5% EBITDA growth, no re-rating (exit 9.5×), no buybacks → <strong>~8% CAGR.</strong> Adding buybacks: ~11%. Adding partial re-rating to 13×: ~15%. Full re-rating (SOTP closes at 16×): ~18%. The base case is unkillable — it assumes nothing beyond conservative growth and dividends.</p>
 
  <p style="margin-top:14px;"><strong>The franchise.</strong> The Altéa Passenger Service System runs reservations, ticketing, departure control, and revenue management for 200+ airlines. Fewer than 10 voluntary PSS departures in 20 years (author's review of public records). 18-36 month migration timeline (sourced: Southwest 3 years per PR Newswire; JAL 3 years per JAL press release). Estimated PSS cost: &lt;1% of airline revenue for most carriers (derived from Amadeus FY2024 filing). The only third-party alternative — Sabre — carries $3.6bn net debt (CIQ) with negative cash from operations.</p>
 
@@ -1230,6 +1241,10 @@ switchTab = function(id) {
 <tr><td><strong>Industry Sources</strong><br><span style="font-size:10px;color:var(--text-dim)">AirlineFYI, Coforge, Amadeus corporate blog</span></td><td>PSS migration timelines and historical case studies.</td></tr>
 </tbody>
 </table>
+</div>
+<div style="margin-top:16px; padding:14px 18px; background:var(--surface2); border:1px solid var(--border-bright); border-radius:8px;">
+ <div style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:6px;">Accompanying Model</div>
+ <p style="font-size:12px; color:var(--text); line-height:1.7;"><strong>GDS_Analysis_JoeBarry_vFINAL.xlsx</strong> — five-tab workbook containing: Quality Screen (PFC benchmark), Amadeus Financials (FY2019-2028E, S&amp;P Capital IQ pull dated 23 Mar 2026), Owner Earnings Bridge, Sabre Dismissal, and Assumptions Register. Every CIQ-sourced figure in this document can be verified against the workbook. <a href="GDS_Analysis_JoeBarry_vFINAL.xlsx" style="color:var(--gold); text-decoration:underline;">Download workbook</a></p>
 </div>
 <p style="margin-top:12px;font-size:10px;color:var(--text-faint)">Amadeus segment data is FY2024 (latest full-year segment disclosure). Consolidated figures use FY2025 where available. Comparable multiples as of late March 2026. Prepared by Joe Barry.</p>
 </div>
